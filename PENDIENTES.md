@@ -8,7 +8,7 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 |---|---|---|---|---|
 | A1 | Iniciar git, commit inicial, remoto y subida a `VIGANEITOR/MATT-SYSTEM` | ✅ Verificado | — | `main` local = `origin/main` |
 | A2 | Excepción `safe.directory` para el USB (FAT32) | ✅ Hecho (registrada 5 veces; no afecta) | — | `git config --global --get-all safe.directory` |
-| A3 | Decidir la visibilidad del repositorio. Hoy es **privado**; GitHub Pages en repos privados requiere plan de pago | ⬜ | Producto | Antes de hacerlo público: A10, B6, ADR-008 y revisar que no haya datos sensibles (Constitución, Art. 39) |
+| A3 | Decidir la visibilidad del repositorio. Hoy es **privado**; GitHub Pages en repos privados requiere plan de pago | ⬜ | Producto | Antes de hacerlo público: B6 ✅, revisión de datos sensibles ✅ ([informe](00_Especificacion/Revisiones/2026-10-13_revision_datos_sensibles.md)); falta decidir ADR-008 |
 | A4 | Activar Pages: *Settings → Pages → Source: GitHub Actions* | ⬜ | Dueño del repo | Requiere A3 |
 | A5 | Crear la variable `PAGES_ENABLED = true` en *Settings → Secrets and variables → Actions → Variables* | ⬜ | Dueño del repo | Sin ella el flujo solo compila el sitio y no lo publica |
 | A6 | Proteger `main`: PR obligatorio + CI verde (Brief de Implementación §8) | ⬜ | Responsable técnico | Con una sola persona, exigir 1 revisión bloquea los merges propios: activarla cuando haya un segundo revisor |
@@ -26,7 +26,10 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 | B3 | Revisar y aprobar el Brief Maestro v1.2 y el Brief de Implementación v2.0 (redactados con IA) | ⬜ | B1 | Constitución, Art. 22 |
 | B4 | Designar especialistas por dominio y revisores independientes | ⬜ | Responsable científico | Constitución, Art. 37 |
 | B5 | Reemplazar la reconstrucción del Brief Maestro v1.0 por el original, si existe | ⬜ | Autor | `00_Especificacion/Brief_Maestro/v1.0/` |
-| B6 | Buscar antecedentes de la marca "MATTX" en INDECOPI | ⬜ | Producto + legal | Brief Maestro §11.4 y §15.1 |
+| B6 | Buscar antecedentes de la marca "MATTX" en INDECOPI | ✅ Sin antecedentes (informado por el autor, 13-oct-2026) | Producto + legal | Guardar la constancia de la búsqueda (fecha, tipo fonética/figurativa, clases). Una búsqueda sin resultados no protege la marca: evaluar registrarla (clases 9 y 42 como mínimo) |
+| B7 | Revisión de datos sensibles del repositorio y su historial | ✅ Sin hallazgos | Asistida por IA | [Informe](00_Especificacion/Revisiones/2026-10-13_revision_datos_sensibles.md); repetir antes de cada release |
+| B8 | Decidir ADR-008 (licencia). Recomendado: opción A, MIT código + CC BY 4.0 documentación y datos | ⬜ | Producto (+ legal) | [ADR-008](00_Especificacion/ADR/ADR-008-licencia.md) |
+| B9 | Licencia comercial de OpenSees/OpenSeesPy si MATTX se ofrece como aplicación o servicio en la nube | ⬜ antes de R2 | Producto | ADR-008, restricciones de terceros |
 
 ## C. Coherencia entre documentos (detectada en esta revisión)
 
@@ -56,7 +59,7 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 
 | # | Paso | Quién | Referencia |
 |---|---|---|---|
-| E1 | ADR-005 Frontend, ADR-007 Despliegue, ADR-008 Licencia (hoy rige MIT de forma provisional) | Según ADR | [ADR](00_Especificacion/ADR/README.md) |
+| E1 | ADR-005 Frontend, ADR-007 Despliegue (ADR-008: ver B8) | Según ADR | [ADR](00_Especificacion/ADR/README.md) |
 | E2 | ADR-006: caso dorado local de drenaje (estudio firmado con datos completos) y su revisor independiente | Responsable científico | Brief Maestro §14.3 |
 | E3 | Investigación UX: 8–12 entrevistas por persona, observación en gabinete y obra, línea base de tiempos, prueba de patrones de confianza con 5 usuarios | Producto | Brief Maestro §2.2 |
 | E4 | Verificar edición vigente de cada norma N1 y N2 de la matriz (C6) | Investigación + especialista | Brief Maestro §3.3.1 |

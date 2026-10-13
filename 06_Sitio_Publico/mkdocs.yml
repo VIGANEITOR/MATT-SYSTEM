@@ -59,6 +59,8 @@ nav:
           - 00_Especificacion/ADR/ADR-007-despliegue.md
           - 00_Especificacion/ADR/ADR-008-licencia.md
       - Registro de cambios: 00_Especificacion/CHANGELOG.md
+      - Revisiones:
+          - Datos sensibles 13-oct-2026: 00_Especificacion/Revisiones/2026-10-13_revision_datos_sensibles.md
       - Versiones anteriores:
           - Brief Maestro v1.1: 00_Especificacion/Brief_Maestro/v1.1/MATTX_Brief_Maestro_v1.1.md
           - Brief Maestro v1.0 (reconstrucción): 00_Especificacion/Brief_Maestro/v1.0/MATTX_Brief_Maestro_v1.0_reconstruccion.md
