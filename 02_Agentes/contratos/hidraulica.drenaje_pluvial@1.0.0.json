@@ -1,0 +1,13 @@
+{
+  "agent_id": "hidraulica.drenaje_pluvial",
+  "contract_version": "1.0.0",
+  "role": "Especialista en hidráulica urbana",
+  "inputs":  { "$ref": "schemas/drenaje_input.json" },
+  "outputs": { "$ref": "schemas/drenaje_output.json" },
+  "tools_allowed": ["pyswmm@2.x", "geopandas", "norma_lookup"],
+  "permissions": { "network": "deny", "write": ["experiment/*"], "read": ["project/datasets/*"] },
+  "budget": { "max_seconds": 900, "max_tokens": 200000, "max_usd": 2.00 },
+  "done_criteria": ["todas las salidas numéricas enlazan a una ejecución", "verificación de continuidad < 1 %"],
+  "escalation": ["datos faltantes → estado esperando_informacion", "resultado fuera de rango normativo → requiere_revision_humana"],
+  "evals": ["evals/drenaje_caso_dorado_01", "evals/no_inventa_numeros"]
+}

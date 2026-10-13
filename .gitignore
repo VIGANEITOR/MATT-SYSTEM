@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+
+# Sitio generado
+06_Sitio_Publico/docs/
+06_Sitio_Publico/site/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.vscode/
+.idea/
+
+# Secretos y datos sensibles: nunca al repositorio (Constitución, Art. 39)
+.env
+.env.*
+*.pem
+*.key
+**/privado/
+**/confidencial/

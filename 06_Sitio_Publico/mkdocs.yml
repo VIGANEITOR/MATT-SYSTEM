@@ -1,0 +1,72 @@
+site_name: MATTX
+site_description: Plataforma de IA para el desarrollo científico de la ingeniería civil
+repo_url: https://github.com/VIGANEITOR/MATT-SYSTEM
+repo_name: VIGANEITOR/MATT-SYSTEM
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Inicio: index.md
+  - Constitución: CONSTITUCION.md
+  - Especificación:
+      - 00_Especificacion/index.md
+      - Brief Maestro v1.2: 00_Especificacion/Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md
+      - Brief de Agentes v1.0: 00_Especificacion/Brief_Agentes/v1.0/MATTX_Brief_Agentes_v1.0.md
+      - Brief de Implementación v2.0: 00_Especificacion/Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md
+      - Decisiones (ADR):
+          - 00_Especificacion/ADR/index.md
+          - 00_Especificacion/ADR/ADR-000-plantilla.md
+          - 00_Especificacion/ADR/ADR-001-orquestacion.md
+          - 00_Especificacion/ADR/ADR-002-sandbox.md
+          - 00_Especificacion/ADR/ADR-003-proveedores-ia.md
+          - 00_Especificacion/ADR/ADR-004-almacenamiento.md
+          - 00_Especificacion/ADR/ADR-005-frontend.md
+          - 00_Especificacion/ADR/ADR-006-caso-dorado-r1.md
+          - 00_Especificacion/ADR/ADR-007-despliegue.md
+          - 00_Especificacion/ADR/ADR-008-licencia.md
+      - Registro de cambios: 00_Especificacion/CHANGELOG.md
+      - Versiones anteriores:
+          - Brief Maestro v1.1: 00_Especificacion/Brief_Maestro/v1.1/MATTX_Brief_Maestro_v1.1.md
+          - Brief Maestro v1.0 (reconstrucción): 00_Especificacion/Brief_Maestro/v1.0/MATTX_Brief_Maestro_v1.0_reconstruccion.md
+  - Releases:
+      - R0 Esqueleto: 01_Releases/R0_Esqueleto/index.md
+      - R1 Drenaje pluvial: 01_Releases/R1_Drenaje_Pluvial/index.md
+      - R2 Cinco dominios: 01_Releases/R2_Cinco_Dominios/index.md
+      - R3 Integraciones: 01_Releases/R3_Integraciones_Geomatica/index.md
+      - R4 Extensiones: 01_Releases/R4_Extensiones/index.md
+  - Agentes: 02_Agentes/index.md
+  - Casos dorados: 03_Casos_Dorados/index.md
+  - Plataforma: 07_Plataforma/index.md
+  - Programas: 08_Programas/index.md
