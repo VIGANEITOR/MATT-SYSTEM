@@ -23,6 +23,8 @@ se consulta (Constitución, Título III).
 | Brief de Implementación | 2.0 (borrador) | [00_Especificacion/Brief_Implementacion/v2.0](00_Especificacion/Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md) |
 | Decisiones de arquitectura | ADR-001…008 (propuestos) | [00_Especificacion/ADR](00_Especificacion/ADR/README.md) |
 | Registro de cambios | — | [00_Especificacion/CHANGELOG.md](00_Especificacion/CHANGELOG.md) |
+| Pendientes | Revisión 13-oct-2026 | [PENDIENTES.md](PENDIENTES.md) |
+| Seguridad | — | [SECURITY.md](SECURITY.md) |
 
 ## Hoja de ruta
 

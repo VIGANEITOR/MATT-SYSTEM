@@ -40,6 +40,8 @@ markdown_extensions:
 nav:
   - Inicio: index.md
   - Constitución: CONSTITUCION.md
+  - Pendientes: PENDIENTES.md
+  - Seguridad: SECURITY.md
   - Especificación:
       - 00_Especificacion/index.md
       - Brief Maestro v1.2: 00_Especificacion/Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md

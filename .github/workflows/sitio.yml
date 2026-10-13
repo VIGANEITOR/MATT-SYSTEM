@@ -27,12 +27,13 @@ jobs:
       - run: python 06_Sitio_Publico/ensamblar_docs.py
       - run: mkdocs build -f 06_Sitio_Publico/mkdocs.yml
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && vars.PAGES_ENABLED == 'true'
         with:
           path: 06_Sitio_Publico/site
 
   deploy:
-    if: github.event_name != 'pull_request'
+    # Se activa con la variable de repositorio PAGES_ENABLED=true una vez habilitado Pages (PENDIENTES.md, A4–A5)
+    if: github.event_name != 'pull_request' && vars.PAGES_ENABLED == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment:
