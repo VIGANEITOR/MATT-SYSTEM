@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/documentacion_input.json",
+  "title": "Entrada de documentacion_cientifica",
+  "description": "Brief de Agentes v1.1 §5.2.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "experimento_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tipo_entregable": {
+      "enum": [
+        "memoria_calculo",
+        "informe_tecnico",
+        "articulo",
+        "descripcion_dataset"
+      ]
+    },
+    "plantilla": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "$ref": "comunes.schema.json#/$defs/Semver"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "idioma": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+      "default": "es"
+    },
+    "jurisdiccion_cumplimiento": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "resultados_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "informe_vv": {
+      "$ref": "comunes.schema.json#/$defs/Sha256"
+    },
+    "informe_incertidumbre": {
+      "$ref": "comunes.schema.json#/$defs/Sha256"
+    },
+    "theory": {
+      "$ref": "comunes.schema.json#/$defs/Sha256"
+    },
+    "matriz_fuentes": {
+      "$ref": "comunes.schema.json#/$defs/Sha256"
+    },
+    "cifras_significativas": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "default": 3
+    }
+  },
+  "required": [
+    "experimento_id",
+    "tipo_entregable",
+    "plantilla",
+    "jurisdiccion_cumplimiento",
+    "resultados_ids",
+    "informe_vv",
+    "matriz_fuentes"
+  ]
+}

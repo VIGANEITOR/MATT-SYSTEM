@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/drenaje_output.json",
+  "title": "Salida de hidraulica.drenaje_pluvial",
+  "description": "Todo valor numérico es una Cantidad; los Calculados enlazan a su ejecución. El agente no puede marcar \"aprobado\".",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "ejecucion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "herramienta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "imagen_digest": {
+          "$ref": "comunes.schema.json#/$defs/Sha256"
+        },
+        "hash_entradas": {
+          "$ref": "comunes.schema.json#/$defs/Sha256"
+        },
+        "semilla": {
+          "type": "integer"
+        },
+        "inicio": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "fin": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$"
+        }
+      },
+      "required": [
+        "id",
+        "herramienta",
+        "version",
+        "imagen_digest",
+        "hash_entradas",
+        "inicio",
+        "fin"
+      ]
+    },
+    "subcuencas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "area": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "pendiente": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "tiempo_concentracion": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "coeficiente_escorrentia": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "caudal_pico": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          }
+        },
+        "required": [
+          "id",
+          "area",
+          "caudal_pico"
+        ]
+      }
+    },
+    "conductos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "diametro": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "pendiente": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "velocidad_maxima": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "relacion_tirante": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          }
+        },
+        "required": [
+          "id",
+          "diametro",
+          "velocidad_maxima",
+          "relacion_tirante"
+        ]
+      }
+    },
+    "verificacion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "error_continuidad": {
+          "$ref": "comunes.schema.json#/$defs/Cantidad"
+        },
+        "casos_dorados": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "magnitud": {
+                "type": "string",
+                "minLength": 1
+              },
+              "esperado": {
+                "$ref": "comunes.schema.json#/$defs/Cantidad"
+              },
+              "observado": {
+                "$ref": "comunes.schema.json#/$defs/Cantidad"
+              },
+              "tolerancia_relativa": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "cumple": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "magnitud",
+              "esperado",
+              "observado",
+              "tolerancia_relativa",
+              "cumple"
+            ]
+          }
+        }
+      },
+      "required": [
+        "error_continuidad"
+      ]
+    },
+    "cumplimiento": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "elemento_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "criterio": {
+            "type": "string",
+            "minLength": 1
+          },
+          "norma": {
+            "$ref": "comunes.schema.json#/$defs/Norma"
+          },
+          "valor": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "limite": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          },
+          "estado": {
+            "enum": [
+              "cumple",
+              "no cumple",
+              "no concluyente",
+              "requiere datos"
+            ]
+          }
+        },
+        "required": [
+          "criterio",
+          "norma",
+          "estado"
+        ]
+      }
+    },
+    "sensibilidad": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "parametro": {
+            "enum": [
+              "intensidad_lluvia",
+              "coeficiente_escorrentia"
+            ]
+          },
+          "variacion_relativa": {
+            "type": "number"
+          },
+          "variacion_caudal_pico": {
+            "$ref": "comunes.schema.json#/$defs/Cantidad"
+          }
+        },
+        "required": [
+          "parametro",
+          "variacion_relativa",
+          "variacion_caudal_pico"
+        ]
+      }
+    },
+    "supuestos": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "estado_verificacion": {
+      "enum": [
+        "no verificado",
+        "verificado",
+        "validado"
+      ],
+      "description": "La aprobación es humana (Constitución, Art. 11); este campo nunca vale \"aprobado\""
+    }
+  },
+  "required": [
+    "ejecucion",
+    "subcuencas",
+    "conductos",
+    "verificacion",
+    "cumplimiento",
+    "estado_verificacion"
+  ]
+}

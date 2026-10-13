@@ -23,7 +23,7 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 |---|---|---|---|---|
 | B1 | Designar responsables de producto, técnico y científico | ⬜ | Autor | Brief Maestro §0; Brief de Agentes §9.3 |
 | B2 | Ratificar la Constitución v1.0 (hoy provisional) | ⬜ | B1 | Disposición transitoria primera |
-| B3 | Revisar y aprobar el Brief Maestro v1.2 y el Brief de Implementación v2.0 (redactados con IA) | ⬜ | B1 | Constitución, Art. 22 |
+| B3 | Revisar y aprobar el Brief Maestro v1.3, el Brief de Agentes v1.1 y el Brief de Implementación v2.1 (redactados con IA) | ⬜ | B1 | Constitución, Art. 22 |
 | B4 | Designar especialistas por dominio y revisores independientes | ⬜ | Responsable científico | Constitución, Art. 37 |
 | B5 | Reemplazar la reconstrucción del Brief Maestro v1.0 por el original, si existe | ⬜ | Autor | `00_Especificacion/Brief_Maestro/v1.0/` |
 | B6 | Buscar antecedentes de la marca "MATTX" en INDECOPI | ✅ Sin antecedentes (informado por el autor, 13-oct-2026) | Producto + legal | Guardar la constancia de la búsqueda (fecha, tipo fonética/figurativa, clases). Una búsqueda sin resultados no protege la marca: evaluar registrarla (clases 9 y 42 como mínimo) |
@@ -31,16 +31,18 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 | B8 | Decidir ADR-008 (licencia). Recomendado: opción A, MIT código + CC BY 4.0 documentación y datos | ⬜ | Producto (+ legal) | [ADR-008](00_Especificacion/ADR/ADR-008-licencia.md) |
 | B9 | Licencia comercial de OpenSees/OpenSeesPy si MATTX se ofrece como aplicación o servicio en la nube | ⬜ antes de R2 | Producto | ADR-008, restricciones de terceros |
 
-## C. Coherencia entre documentos (detectada en esta revisión)
+## C. Coherencia entre documentos
 
-| # | Hallazgo | Propuesta |
-|---|---|---|
-| C1 | El **agente de Documentación científica** está en el catálogo del Brief Maestro (§7.2, R1) y lo usa el paso 8 del flujo R1, pero **no figura** entre los 17 agentes del Brief de Agentes | Agregarlo en un Brief de Agentes v1.1 |
-| C2 | El Brief Maestro §7.2 dice que los 5 roles de diseño son "roles del equipo, no agentes del producto"; el Brief de Agentes los define como agentes (grupo B) | Decidir en un ADR: agentes de la fábrica para programas T3, o roles humanos |
-| C3 | El Brief Maestro llama "Desarrollo científico" y "Verificación" a los agentes que el Brief de Agentes llama "Desarrollo/automatización" y "Verificación técnica" | Unificar nombres en Agentes v1.1 |
-| C4 | El Brief de Agentes cita el "Brief v1.1 §7.1"; la versión vigente es la v1.2 y la ficha del agente de Investigación no recoge "conocimiento sin fronteras" (DOI, país, nivel de evidencia, RF-15/16) | Actualizar en Agentes v1.1 |
-| C5 | El contrato de ejemplo `hidraulica.drenaje_pluvial@1.0.0.json` referencia `schemas/drenaje_input.json` y `schemas/drenaje_output.json`, que no existen | Crearlos junto con D5 |
-| C6 | La matriz normativa internacional del Brief Maestro v1.2 §3.3.1 se redactó con asistencia de IA | Verificar nombre, edición y vigencia de cada norma antes de R1 (D9) |
+| # | Hallazgo | Estado | Resolución |
+|---|---|---|---|
+| C1 | Faltaba el agente de Documentación científica en el Brief de Agentes | ✅ Resuelto | Brief de Agentes v1.1 §5.2 (ficha, mecanismo, criterio de terminado, evals) y contrato `documentacion_cientifica@1.0.0` |
+| C2 | Grupo B: ¿agentes o personas? | ✅ Decidido: **agentes** | Brief de Agentes v1.1 §4 y Brief Maestro v1.3 §7.2; las personas aprueban en G-UI |
+| C3 | Nombres distintos entre briefs | ✅ Resuelto | Nombre de mayor especialización (Brief de Agentes v1.1 §2.1); "Incertidumbre y multicriterio" dividido; 21 agentes base |
+| C4 | Referencias a versiones antiguas y regla sin fronteras | ✅ Resuelto | Toda versión anterior queda superada; Investigación con matriz nacional e internacional |
+| C5 | Esquemas JSON inexistentes | ✅ Resuelto | 7 esquemas, 2 contratos, 3 ejemplos; validador y pruebas negativas en CI (`.github/workflows/spec.yml`) |
+| C6 | Matriz normativa redactada con IA | 🔄 En revisión | [Documento de revisión](00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md): 95 normas; 6 corregidas en v1.3; 73 por verificar; 13 por precisar |
+| C7 | Hallazgos derivados de C6 | ⬜ | Confirmar en fuente oficial: CE.040 (y la modificación del num. 21.2.1), Ley 32069 y su reglamento con modificaciones de 2026, E.030 (RM 183-2026 y su régimen transitorio). Responsable: especialista de cada dominio, antes de R1 |
+| C8 | Aprobar el Brief de Agentes v1.1, el Brief Maestro v1.3 y el Brief de Implementación v2.1 | ⬜ | Redactados con asistencia de IA (B3) |
 
 ## D. Antes de R0
 
@@ -50,7 +52,7 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 | D2 | ADR-002 Sandbox | Responsable técnico | [ADR-002](00_Especificacion/ADR/ADR-002-sandbox.md) |
 | D3 | ADR-003 Proveedores de IA, incluido si los verificadores usan un modelo distinto al de los autores | Producto + técnico | [ADR-003](00_Especificacion/ADR/ADR-003-proveedores-ia.md); Agentes §9.3 |
 | D4 | ADR-004 Almacenamiento | Responsable técnico | [ADR-004](00_Especificacion/ADR/ADR-004-almacenamiento.md) |
-| D5 | Esquemas JSON: contrato de agente, mensaje entre agentes, SPEC, THEORY, manifiesto | Responsable técnico | Brief de Implementación §12 |
+| D5 | Esquemas JSON de SPEC, THEORY y manifiesto (contrato y mensaje de agente ya existen) | Responsable técnico | Brief de Implementación §12 |
 | D6 | Presupuestos iniciales por agente y por tipo de programa | Producto + técnico | Agentes §9.3 |
 | D7 | Programa T1 piloto de G0 y su caso dorado | Responsable científico | Brief de Implementación §10 |
 | D8 | Umbrales de cobertura y mutación por tipo de programa; proveedor de CI con sandbox | Responsable técnico | Brief de Implementación §12 |
@@ -62,6 +64,6 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 | E1 | ADR-005 Frontend, ADR-007 Despliegue (ADR-008: ver B8) | Según ADR | [ADR](00_Especificacion/ADR/README.md) |
 | E2 | ADR-006: caso dorado local de drenaje (estudio firmado con datos completos) y su revisor independiente | Responsable científico | Brief Maestro §14.3 |
 | E3 | Investigación UX: 8–12 entrevistas por persona, observación en gabinete y obra, línea base de tiempos, prueba de patrones de confianza con 5 usuarios | Producto | Brief Maestro §2.2 |
-| E4 | Verificar edición vigente de cada norma N1 y N2 de la matriz (C6) | Investigación + especialista | Brief Maestro §3.3.1 |
+| E4 | Verificar en fuente oficial cada norma N1 y N2 de la matriz (C6, C7) | Investigación + especialista | Brief Maestro §3.3.1 |
 | E5 | Prueba de penetración | Seguridad | Brief Maestro §13.1 |
 | E6 | Design system v1 en Storybook | Diseño | Brief Maestro §11.3 |

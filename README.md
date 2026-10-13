@@ -18,20 +18,23 @@ se consulta (Constitución, Título III).
 | Documento | Versión | Archivo |
 |---|---|---|
 | Constitución | 1.0 (provisional) | [CONSTITUCION.md](CONSTITUCION.md) |
-| Brief Maestro | 1.2 | [00_Especificacion/Brief_Maestro/v1.2](00_Especificacion/Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md) |
-| Brief de Agentes | 1.0 | [00_Especificacion/Brief_Agentes/v1.0](00_Especificacion/Brief_Agentes/v1.0/MATTX_Brief_Agentes_v1.0.md) |
-| Brief de Implementación | 2.0 (borrador) | [00_Especificacion/Brief_Implementacion/v2.0](00_Especificacion/Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md) |
+| Brief Maestro | 1.3 | [00_Especificacion/Brief_Maestro/v1.3](00_Especificacion/Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md) |
+| Brief de Agentes | 1.1 | [00_Especificacion/Brief_Agentes/v1.1](00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md) |
+| Brief de Implementación | 2.1 (borrador) | [00_Especificacion/Brief_Implementacion/v2.1](00_Especificacion/Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md) |
+| Verificación de la matriz normativa | Revisión 13-oct-2026 | [00_Especificacion/Revisiones](00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md) |
 | Decisiones de arquitectura | ADR-001…008 (propuestos) | [00_Especificacion/ADR](00_Especificacion/ADR/README.md) |
 | Registro de cambios | — | [00_Especificacion/CHANGELOG.md](00_Especificacion/CHANGELOG.md) |
 | Pendientes | Revisión 13-oct-2026 | [PENDIENTES.md](PENDIENTES.md) |
 | Seguridad | — | [SECURITY.md](SECURITY.md) |
+
+Toda versión anterior de un documento queda **superada** por la vigente y se conserva solo como historial.
 
 ## Hoja de ruta
 
 | Release | Alcance (Must) | Criterio de salida | Estado |
 |---|---|---|---|
 | R0 — Esqueleto | Usuarios, proyectos, registro de experimentos, orquestador, sandbox sin red, artefactos con hash, procedencia básica | Script Python en sandbox, trazable y reproducible bit a bit | Planificado |
-| R1 — Drenaje pluvial | Flujo RNE OS.060 de punta a punta con referencias internacionales, patrones de confianza, design system v1 | Caso dorado ±2 %, 100 % valores trazables, firma del ingeniero, SUS ≥ 75 | Planificado |
+| R1 — Drenaje pluvial | Flujo RNE CE.040 (ex OS.060) de punta a punta con referencias internacionales, patrones de confianza, design system v1 | Caso dorado ±2 %, 100 % valores trazables, firma del ingeniero, SUS ≥ 75 | Planificado |
 | R2 — Cinco dominios | Geotecnia, pavimentos, estructural, construcción, incertidumbre, AHP | 5/5 casos dorados aprobados por revisor independiente | Planificado |
 | R3 — Integraciones | CAD/BIM/GIS, conectores licenciados, nubes de puntos, paquete cifrado | Matriz de conectores con estado real y pruebas de recuperación | Planificado |
 | R4+ — Extensiones | Portable, fablab virtual, visión móvil, GNSS | Mini-brief + ADR + criterio de salida propios | Planificado |
@@ -42,7 +45,7 @@ se consulta (Constitución, Título III).
 CONSTITUCION.md      Reglas superiores del proyecto
 00_Especificacion/   Briefs versionados (vN.M), ADRs y registro de cambios
 01_Releases/         Una carpeta de trabajo por release (R0–R4): alcance, diseño, desarrollo, QA, entregables
-02_Agentes/          Contratos, evals y perfiles de dominio de los 17 agentes
+02_Agentes/          Contratos, esquemas JSON, evals y perfiles de dominio de los 21 agentes base
 03_Casos_Dorados/    Benchmarks con datos fijos, resultado de referencia y tolerancia por dominio
 04_Design_System/    Tokens, componentes y guía de arte
 05_Investigacion_UX/ Entrevistas, personas, JTBD y métricas de línea base (sin datos personales)

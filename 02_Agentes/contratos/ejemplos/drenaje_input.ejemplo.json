@@ -1,0 +1,109 @@
+{
+  "notas": "EJEMPLO SINTÉTICO para probar el esquema. No son datos reales ni criterios normativos.",
+  "proyecto": {
+    "id": "ejemplo-sintetico",
+    "jurisdiccion_cumplimiento": "PE",
+    "crs_epsg": 32718
+  },
+  "pregunta": {
+    "enunciado": "Pregunta de prueba del esquema",
+    "hipotesis": "Hipótesis de prueba",
+    "criterio_aceptacion": "Criterio de prueba"
+  },
+  "datasets": {
+    "topografia": {
+      "uri": "datasets/ejemplo/mdt.tif",
+      "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "formato": "GeoTIFF",
+      "fuente": "sintética",
+      "licencia": "CC0-1.0",
+      "crs_epsg": 32718
+    },
+    "lluvia": {
+      "uri": "datasets/ejemplo/idf.csv",
+      "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "formato": "CSV",
+      "fuente": "sintética",
+      "licencia": "CC0-1.0"
+    },
+    "lluvia_metadatos": {
+      "tipo": "IDF",
+      "estacion": "estación sintética",
+      "periodo_registro": {
+        "inicio": "2000-01-01",
+        "fin": "2020-12-31"
+      }
+    },
+    "catastro": {
+      "uri": "datasets/ejemplo/catastro.gpkg",
+      "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "formato": "GeoPackage",
+      "fuente": "sintética",
+      "licencia": "CC0-1.0",
+      "crs_epsg": 32718
+    },
+    "coeficientes_escorrentia": {
+      "uri": "datasets/ejemplo/coeficientes.csv",
+      "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "formato": "CSV",
+      "fuente": "sintética",
+      "licencia": "CC0-1.0"
+    }
+  },
+  "criterios_diseno": {
+    "norma_cumplimiento": {
+      "codigo": "CE.040",
+      "titulo": "Drenaje Pluvial",
+      "organismo": "MVCS",
+      "pais": "PE",
+      "edicion": "RM 126-2021-VIVIENDA",
+      "rol": "cumplimiento",
+      "estado_verificacion": "por verificar",
+      "fecha_consulta": "2026-10-13"
+    },
+    "referencias": [],
+    "periodo_retorno": {
+      "valor": 1,
+      "unidad": "a",
+      "procedencia": "Ingresado"
+    },
+    "velocidad_minima": {
+      "valor": 1,
+      "unidad": "m/s",
+      "procedencia": "Ingresado"
+    },
+    "velocidad_maxima": {
+      "valor": 2,
+      "unidad": "m/s",
+      "procedencia": "Ingresado"
+    },
+    "relacion_tirante_diametro_max": {
+      "valor": 0.5,
+      "unidad": "1",
+      "procedencia": "Ingresado"
+    }
+  },
+  "escenarios": [
+    {
+      "id": "E1",
+      "periodo_retorno": {
+        "valor": 1,
+        "unidad": "a",
+        "procedencia": "Ingresado"
+      }
+    }
+  ],
+  "sensibilidad": {
+    "parametros": [
+      {
+        "nombre": "intensidad_lluvia",
+        "variacion_relativa": 0.2
+      },
+      {
+        "nombre": "coeficiente_escorrentia",
+        "variacion_relativa": 0.2
+      }
+    ]
+  },
+  "semilla": 0
+}

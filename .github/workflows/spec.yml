@@ -1,0 +1,24 @@
+name: Contratos de agente
+
+on:
+  push:
+    branches: [main]
+    paths: ["02_Agentes/**", ".github/workflows/spec.yml"]
+  pull_request:
+    paths: ["02_Agentes/**", ".github/workflows/spec.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r 02_Agentes/requirements.txt
+      - run: python 02_Agentes/validar_contratos.py
+      - run: python 02_Agentes/pruebas_contratos.py

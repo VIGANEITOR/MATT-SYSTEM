@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/comunes.schema.json",
+  "title": "MATTX — tipos comunes",
+  "description": "Tipos compartidos: procedencia (W3C PROV, Brief Maestro §5), cantidades en SI, normas, fuentes y datasets.",
+  "$defs": {
+    "Sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "Semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "AgenteRef": {
+      "type": "string",
+      "pattern": "^[a-z][a-z_]*(\\.[a-z][a-z_]*)?@\\d+\\.\\d+\\.\\d+$",
+      "description": "<agent_id>@<version>, p. ej. verificacion_tecnica@1.2.0"
+    },
+    "ProgramaRef": {
+      "type": "string",
+      "pattern": "^[a-z][a-z_]*\\.[a-z][a-z_]*@\\d+\\.\\d+\\.\\d+$",
+      "description": "<dominio>.<nombre>@<version>"
+    },
+    "Procedencia": {
+      "enum": [
+        "Ingresado",
+        "Medido",
+        "Calculado",
+        "Importado",
+        "Inferido",
+        "Generado por IA"
+      ]
+    },
+    "Cantidad": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Valor con unidad SI y procedencia. Un valor Calculado exige ejecucion_id (Constitución, Art. 8).",
+      "properties": {
+        "valor": {
+          "type": "number"
+        },
+        "unidad": {
+          "type": "string",
+          "description": "Símbolo de unidad SI o derivada (m, m2, m3/s, m/s, s, a, 1, %)"
+        },
+        "procedencia": {
+          "$ref": "#/$defs/Procedencia"
+        },
+        "ejecucion_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resultado_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "incertidumbre": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "tipo": {
+              "enum": [
+                "desviacion_estandar",
+                "intervalo",
+                "determinístico"
+              ]
+            },
+            "valor": {
+              "type": "number",
+              "minimum": 0
+            },
+            "inferior": {
+              "type": "number"
+            },
+            "superior": {
+              "type": "number"
+            },
+            "nivel_confianza": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            }
+          },
+          "required": [
+            "tipo"
+          ]
+        },
+        "verificado": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "valor",
+        "unidad",
+        "procedencia"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "procedencia": {
+                "const": "Calculado"
+              }
+            },
+            "required": [
+              "procedencia"
+            ]
+          },
+          "then": {
+            "required": [
+              "ejecucion_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "procedencia": {
+                "const": "Generado por IA"
+              }
+            },
+            "required": [
+              "procedencia"
+            ]
+          },
+          "then": {
+            "properties": {
+              "verificado": {
+                "const": false
+              }
+            },
+            "required": [
+              "verificado"
+            ]
+          }
+        }
+      ]
+    },
+    "Norma": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "codigo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "titulo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organismo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pais": {
+          "type": "string",
+          "pattern": "^([A-Z]{2}|INT)$",
+          "description": "ISO 3166-1 alfa-2, o INT para organismos internacionales"
+        },
+        "edicion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "articulo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rol": {
+          "enum": [
+            "cumplimiento",
+            "referencia"
+          ],
+          "description": "RF-16: una norma extranjera nunca es de cumplimiento local"
+        },
+        "estado_verificacion": {
+          "enum": [
+            "verificada",
+            "por verificar"
+          ]
+        },
+        "fecha_consulta": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      },
+      "required": [
+        "codigo",
+        "organismo",
+        "pais",
+        "edicion",
+        "rol",
+        "fecha_consulta"
+      ]
+    },
+    "Literatura": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "doi": {
+          "type": "string",
+          "pattern": "^10\\.\\d{4,9}/\\S+$"
+        },
+        "isbn": {
+          "type": "string",
+          "minLength": 1
+        },
+        "handle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "autores": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "anio": {
+          "type": "integer",
+          "minimum": 1600
+        },
+        "titulo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publicacion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pais_estudio": {
+          "type": "string",
+          "pattern": "^([A-Z]{2}|INT)$"
+        },
+        "nivel_evidencia": {
+          "enum": [
+            "N1",
+            "N2",
+            "N3",
+            "N4",
+            "N5"
+          ]
+        },
+        "fecha_consulta": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      },
+      "required": [
+        "autores",
+        "anio",
+        "titulo",
+        "nivel_evidencia",
+        "fecha_consulta"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "doi"
+          ]
+        },
+        {
+          "required": [
+            "isbn"
+          ]
+        },
+        {
+          "required": [
+            "handle"
+          ]
+        }
+      ]
+    },
+    "Fuente": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Norma"
+        },
+        {
+          "$ref": "#/$defs/Literatura"
+        }
+      ]
+    },
+    "Dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "formato": {
+          "type": "string",
+          "minLength": 1
+        },
+        "crs_epsg": {
+          "type": "integer"
+        },
+        "fuente": {
+          "type": "string",
+          "minLength": 1
+        },
+        "licencia": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "uri",
+        "sha256",
+        "formato",
+        "fuente",
+        "licencia"
+      ]
+    }
+  }
+}

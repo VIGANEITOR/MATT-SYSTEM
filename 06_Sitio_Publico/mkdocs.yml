@@ -44,9 +44,9 @@ nav:
   - Seguridad: SECURITY.md
   - Especificación:
       - 00_Especificacion/index.md
-      - Brief Maestro v1.2: 00_Especificacion/Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md
-      - Brief de Agentes v1.0: 00_Especificacion/Brief_Agentes/v1.0/MATTX_Brief_Agentes_v1.0.md
-      - Brief de Implementación v2.0: 00_Especificacion/Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md
+      - Brief Maestro v1.3: 00_Especificacion/Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md
+      - Brief de Agentes v1.1: 00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md
+      - Brief de Implementación v2.1: 00_Especificacion/Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md
       - Decisiones (ADR):
           - 00_Especificacion/ADR/index.md
           - 00_Especificacion/ADR/ADR-000-plantilla.md
@@ -61,7 +61,11 @@ nav:
       - Registro de cambios: 00_Especificacion/CHANGELOG.md
       - Revisiones:
           - Datos sensibles 13-oct-2026: 00_Especificacion/Revisiones/2026-10-13_revision_datos_sensibles.md
-      - Versiones anteriores:
+          - Matriz normativa 13-oct-2026: 00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md
+      - Versiones anteriores (superadas):
+          - Brief Maestro v1.2: 00_Especificacion/Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md
+          - Brief de Agentes v1.0: 00_Especificacion/Brief_Agentes/v1.0/MATTX_Brief_Agentes_v1.0.md
+          - Brief de Implementación v2.0: 00_Especificacion/Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md
           - Brief Maestro v1.1: 00_Especificacion/Brief_Maestro/v1.1/MATTX_Brief_Maestro_v1.1.md
           - Brief Maestro v1.0 (reconstrucción): 00_Especificacion/Brief_Maestro/v1.0/MATTX_Brief_Maestro_v1.0_reconstruccion.md
   - Releases:

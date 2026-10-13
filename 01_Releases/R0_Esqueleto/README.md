@@ -11,7 +11,7 @@ RF-01 Crear proyecto con jurisdicción y CRS · RF-02 Pregunta e hipótesis ante
 RF-03 Sandbox aislado · RF-04 Reproducir una ejecución · RF-05 Etiquetar procedencia de cada valor
 
 ## Agentes
-Análisis, Planificación, Desarrollo científico
+Análisis, Planificación, Desarrollo científico, Verificación técnica (básica), Despliegue (Brief de Agentes v1.1 §7)
 
 ## Decisiones previas
 ADR-001 Orquestación · ADR-002 Sandbox · ADR-003 Proveedores de IA · ADR-004 Almacenamiento

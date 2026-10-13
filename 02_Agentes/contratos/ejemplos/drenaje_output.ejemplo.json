@@ -1,0 +1,92 @@
+{
+  "ejecucion": {
+    "id": "run-ejemplo",
+    "herramienta": "pyswmm",
+    "version": "0.0.0",
+    "imagen_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "hash_entradas": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "semilla": 0,
+    "inicio": "2026-10-13T00:00:00Z",
+    "fin": "2026-10-13T00:00:01Z"
+  },
+  "subcuencas": [
+    {
+      "id": "S1",
+      "area": {
+        "valor": 1,
+        "unidad": "m2",
+        "procedencia": "Calculado",
+        "ejecucion_id": "run-ejemplo"
+      },
+      "caudal_pico": {
+        "valor": 1,
+        "unidad": "m3/s",
+        "procedencia": "Calculado",
+        "ejecucion_id": "run-ejemplo"
+      }
+    }
+  ],
+  "conductos": [
+    {
+      "id": "C1",
+      "diametro": {
+        "valor": 1,
+        "unidad": "m",
+        "procedencia": "Ingresado"
+      },
+      "velocidad_maxima": {
+        "valor": 1,
+        "unidad": "m/s",
+        "procedencia": "Calculado",
+        "ejecucion_id": "run-ejemplo"
+      },
+      "relacion_tirante": {
+        "valor": 0.1,
+        "unidad": "1",
+        "procedencia": "Calculado",
+        "ejecucion_id": "run-ejemplo"
+      }
+    }
+  ],
+  "verificacion": {
+    "error_continuidad": {
+      "valor": 0.1,
+      "unidad": "%",
+      "procedencia": "Calculado",
+      "ejecucion_id": "run-ejemplo"
+    },
+    "casos_dorados": []
+  },
+  "cumplimiento": [
+    {
+      "elemento_id": "C1",
+      "criterio": "velocidad máxima",
+      "norma": {
+        "codigo": "CE.040",
+        "titulo": "Drenaje Pluvial",
+        "organismo": "MVCS",
+        "pais": "PE",
+        "edicion": "RM 126-2021-VIVIENDA",
+        "rol": "cumplimiento",
+        "estado_verificacion": "por verificar",
+        "fecha_consulta": "2026-10-13"
+      },
+      "valor": {
+        "valor": 1,
+        "unidad": "m/s",
+        "procedencia": "Calculado",
+        "ejecucion_id": "run-ejemplo"
+      },
+      "limite": {
+        "valor": 2,
+        "unidad": "m/s",
+        "procedencia": "Ingresado"
+      },
+      "estado": "cumple"
+    }
+  ],
+  "supuestos": [
+    "EJEMPLO SINTÉTICO para probar el esquema. No son datos reales ni criterios normativos."
+  ],
+  "estado_verificacion": "no verificado"
+}

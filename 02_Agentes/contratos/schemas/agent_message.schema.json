@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/agent_message.schema.json",
+  "title": "MATTX — mensaje entre agentes",
+  "description": "Brief de Agentes v1.1 §6.1. Un mensaje de otro tipo se rechaza.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "msg_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "from": {
+      "oneOf": [
+        {
+          "$ref": "comunes.schema.json#/$defs/AgenteRef"
+        },
+        {
+          "const": "orchestrator"
+        }
+      ]
+    },
+    "to": {
+      "oneOf": [
+        {
+          "$ref": "comunes.schema.json#/$defs/AgenteRef"
+        },
+        {
+          "const": "orchestrator"
+        }
+      ]
+    },
+    "type": {
+      "enum": [
+        "request",
+        "artifact_ready",
+        "defect_report",
+        "clarification_needed",
+        "escalation",
+        "proposal"
+      ]
+    },
+    "program": {
+      "$ref": "comunes.schema.json#/$defs/ProgramaRef"
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "comunes.schema.json#/$defs/Sha256"
+      }
+    },
+    "payload": {
+      "type": "object"
+    },
+    "requires_response_by": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "msg_id",
+    "from",
+    "to",
+    "type",
+    "artifact_refs",
+    "payload"
+  ]
+}

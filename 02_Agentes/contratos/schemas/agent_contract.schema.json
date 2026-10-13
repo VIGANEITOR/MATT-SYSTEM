@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/agent_contract.schema.json",
+  "title": "MATTX — contrato de agente",
+  "description": "Brief Maestro v1.3 §7.1 y Brief de Agentes v1.1 §6.3. El orquestador rechaza agentes cuyo contrato no valide.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z_]*(\\.[a-z][a-z_]*)?$"
+    },
+    "contract_version": {
+      "$ref": "comunes.schema.json#/$defs/Semver"
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "group": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "base_agent": {
+      "type": "string",
+      "pattern": "^[a-z][a-z_]*$",
+      "description": "Solo instancias de dominio (Brief de Agentes v1.1 §2.2)"
+    },
+    "domain_profile": {
+      "type": "string",
+      "pattern": "^[a-z][a-z_]*$"
+    },
+    "lifecycle_state": {
+      "enum": [
+        "propuesto",
+        "experimental",
+        "supervisado",
+        "activo",
+        "retirado"
+      ]
+    },
+    "sandbox_profile": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "tools_allowed": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "network": {
+          "enum": [
+            "deny",
+            "allowlist"
+          ]
+        },
+        "network_allowlist": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "read": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "write": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "network",
+        "read",
+        "write"
+      ],
+      "if": {
+        "properties": {
+          "network": {
+            "const": "allowlist"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "network_allowlist"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "network_allowlist"
+          ]
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "max_tokens": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "max_usd": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "status": {
+          "enum": [
+            "provisional",
+            "aprobado"
+          ]
+        }
+      },
+      "required": [
+        "max_seconds",
+        "max_tokens",
+        "max_usd"
+      ]
+    },
+    "done_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "escalation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "evals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "agent_id",
+    "contract_version",
+    "role",
+    "inputs",
+    "outputs",
+    "tools_allowed",
+    "permissions",
+    "budget",
+    "done_criteria",
+    "escalation",
+    "evals"
+  ],
+  "dependentRequired": {
+    "base_agent": [
+      "domain_profile"
+    ],
+    "domain_profile": [
+      "base_agent"
+    ]
+  }
+}

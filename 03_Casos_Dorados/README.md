@@ -5,7 +5,7 @@ el dominio no se libera. Las tolerancias son propuestas iniciales que el especia
 
 | Carpeta | Caso propuesto | Tolerancia inicial | Release |
 |---|---|---|---|
-| hidraulica | Ejemplos oficiales del manual de SWMM (EPA) + caso local firmado OS.060 | ±2 % caudal pico; continuidad < 1 % | R1 |
+| hidraulica | Ejemplos oficiales del manual de SWMM (EPA) + caso local firmado bajo CE.040 | ±2 % caudal pico; continuidad < 1 % | R1 |
 | geotecnia | Problemas resueltos de literatura de referencia | ±3 % capacidad; ±0,02 FS | R2 |
 | pavimentos | Ejemplo de diseño de la guía AASHTO 93 | ±1 % número estructural | R2 |
 | estructural | Pórtico de referencia con solución analítica o benchmark | ±2 % periodos; ±5 % derivas | R2 |

@@ -1,0 +1,18 @@
+{
+  "msg_id": "6f1c2a9e-0b7d-4c1e-9a43-2f5d8e7b1c00",
+  "from": "verificacion_tecnica@1.2.0",
+  "to": "desarrollo_cientifico@1.4.1",
+  "type": "defect_report",
+  "program": "hidraulica.drenaje_pluvial_urbano@0.3.0",
+  "artifact_refs": [
+    "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "payload": {
+    "nota": "EJEMPLO SINTÉTICO para probar el esquema. No son datos reales ni criterios normativos.",
+    "severity": "S1",
+    "test": "golden/caso_01",
+    "unit": "m3/s",
+    "tolerance": 0.02
+  },
+  "requires_response_by": "orchestrator_deadline"
+}

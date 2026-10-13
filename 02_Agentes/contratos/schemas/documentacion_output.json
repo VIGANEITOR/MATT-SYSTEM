@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/documentacion_output.json",
+  "title": "Salida de documentacion_cientifica",
+  "description": "Un entregable solo puede estar \"listo_para_revision\" si no le falta ningún valor.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "entregable": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fuente_md": {
+          "$ref": "comunes.schema.json#/$defs/Sha256"
+        },
+        "pdfa": {
+          "$ref": "comunes.schema.json#/$defs/Sha256"
+        },
+        "version": {
+          "$ref": "comunes.schema.json#/$defs/Semver"
+        }
+      },
+      "required": [
+        "fuente_md",
+        "version"
+      ]
+    },
+    "trazabilidad": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "marcador": {
+            "type": "string",
+            "pattern": "^\\{\\{resultado:[^}]+\\}\\}$"
+          },
+          "resultado_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ejecucion_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "procedencia": {
+            "$ref": "comunes.schema.json#/$defs/Procedencia"
+          }
+        },
+        "required": [
+          "marcador",
+          "resultado_id",
+          "procedencia"
+        ]
+      }
+    },
+    "valores_faltantes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "bibliografia": {
+      "type": "array",
+      "items": {
+        "$ref": "comunes.schema.json#/$defs/Fuente"
+      }
+    },
+    "supuestos_limitaciones": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "ejecuciones_descartadas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ejecucion_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "motivo": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "ejecucion_id",
+          "motivo"
+        ]
+      }
+    },
+    "anexo_ia": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "secciones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "seccion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tipo": {
+                "enum": [
+                  "redactado",
+                  "propuesto",
+                  "traducido"
+                ]
+              }
+            },
+            "required": [
+              "seccion",
+              "tipo"
+            ]
+          }
+        }
+      },
+      "required": [
+        "secciones"
+      ]
+    },
+    "estado": {
+      "enum": [
+        "borrador",
+        "listo_para_revision"
+      ]
+    }
+  },
+  "required": [
+    "entregable",
+    "trazabilidad",
+    "valores_faltantes",
+    "bibliografia",
+    "anexo_ia",
+    "estado"
+  ],
+  "if": {
+    "properties": {
+      "estado": {
+        "const": "listo_para_revision"
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "valores_faltantes": {
+        "maxItems": 0
+      },
+      "trazabilidad": {
+        "items": {
+          "properties": {
+            "procedencia": {
+              "not": {
+                "const": "Generado por IA"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
