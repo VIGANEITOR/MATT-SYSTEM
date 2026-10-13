@@ -66,4 +66,4 @@ según se indica en el control de cada documento (Constitución, Art. 22).
 
 ## Licencia
 
-Pendiente de [ADR-008](00_Especificacion/ADR/ADR-008-licencia.md). Hasta su aprobación: todos los derechos reservados.
+El repositorio se publica bajo licencia [MIT](LICENSE), creada al inicializar el repositorio en GitHub. [ADR-008](00_Especificacion/ADR/ADR-008-licencia.md) debe confirmarla o reemplazarla (por ejemplo, separando la licencia del código y la de la documentación y los datos).

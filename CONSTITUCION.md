@@ -224,8 +224,8 @@ para todos.
 **Primera.** Mientras no se designen los tres responsables, el autor ejerce provisionalmente sus funciones y esta
 Constitución rige de forma provisional. La ratificación se registra en el registro de cambios.
 
-**Segunda.** Mientras no se apruebe el ADR-008 (licencia), el contenido del repositorio se publica con todos los
-derechos reservados.
+**Segunda.** Mientras no se apruebe el ADR-008 (licencia), rige la licencia incluida en el archivo `LICENSE` del
+repositorio (MIT).
 
 **Tercera.** Durante la transición, el autor no puede actuar como revisor independiente de sus propios casos dorados
 (Artículo 37).
