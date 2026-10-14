@@ -18,7 +18,7 @@ se consulta (Constitución, Título III).
 | Documento | Versión | Archivo |
 |---|---|---|
 | Constitución | 1.0 (provisional) | [CONSTITUCION.md](CONSTITUCION.md) |
-| Brief Maestro | 1.3 | [00_Especificacion/Brief_Maestro/v1.3](00_Especificacion/Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md) |
+| Brief Maestro | 1.4 | [00_Especificacion/Brief_Maestro/v1.4](00_Especificacion/Brief_Maestro/v1.4/MATTX_Brief_Maestro_v1.4.md) |
 | Brief de Agentes | 1.1 | [00_Especificacion/Brief_Agentes/v1.1](00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md) |
 | Brief de Implementación | 2.1 (borrador) | [00_Especificacion/Brief_Implementacion/v2.1](00_Especificacion/Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md) |
 | Verificación de la matriz normativa | Revisión 13-oct-2026 | [00_Especificacion/Revisiones](00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md) |
@@ -31,13 +31,16 @@ Toda versión anterior de un documento queda **superada** por la vigente y se co
 
 ## Hoja de ruta
 
-| Release | Alcance (Must) | Criterio de salida | Estado |
+El ámbito científico es **abierto**; cada release cierra solo la prueba de su capacidad, deja un paquete de traspaso
+para el siguiente y se mejora con el feedback (Brief Maestro v1.4 §3).
+
+| Release | Capacidad | Casos de referencia (ejemplos) | Estado |
 |---|---|---|---|
-| R0 — Esqueleto | Usuarios, proyectos, registro de experimentos, orquestador, sandbox sin red, artefactos con hash, procedencia básica | Script Python en sandbox, trazable y reproducible bit a bit | Planificado |
-| R1 — Drenaje pluvial | Flujo RNE CE.040 (ex OS.060) de punta a punta con referencias internacionales, patrones de confianza, design system v1 | Caso dorado ±2 %, 100 % valores trazables, firma del ingeniero, SUS ≥ 75 | Planificado |
-| R2 — Cinco dominios | Geotecnia, pavimentos, estructural, construcción, incertidumbre, AHP | 5/5 casos dorados aprobados por revisor independiente | Planificado |
-| R3 — Integraciones | CAD/BIM/GIS, conectores licenciados, nubes de puntos, paquete cifrado | Matriz de conectores con estado real y pruebas de recuperación | Planificado |
-| R4+ — Extensiones | Portable, fablab virtual, visión móvil, GNSS | Mini-brief + ADR + criterio de salida propios | Planificado |
+| R0 — Núcleo reproducible | Núcleo, sandbox sin red y con red controlada, procedencia, registro de agentes | Programa T1 piloto | Planificado |
+| R1 — Ciclo científico completo | Ciclo de punta a punta para cualquier dominio | Drenaje pluvial bajo CE.040 + prueba de generalidad en otro dominio | Planificado |
+| R2 — Multidominio e interdisciplina | Incorporación de cualquier dominio y flujos acoplados | Cinco dominios + un área más + 2 flujos acoplados | Planificado |
+| R3 — Integraciones y motores propios | Adaptadores abiertos, geomática, motores propios verificados | Motor propio de drenaje contrastado con SWMM | Planificado |
+| R4+ — Extensiones | Registro abierto de extensiones | Portable, fablab virtual, GNSS, gemelos digitales, sensores… | Planificado |
 
 ## Estructura
 

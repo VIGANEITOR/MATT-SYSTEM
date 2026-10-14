@@ -44,7 +44,7 @@ nav:
   - Seguridad: SECURITY.md
   - Especificación:
       - 00_Especificacion/index.md
-      - Brief Maestro v1.3: 00_Especificacion/Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md
+      - Brief Maestro v1.4: 00_Especificacion/Brief_Maestro/v1.4/MATTX_Brief_Maestro_v1.4.md
       - Brief de Agentes v1.1: 00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md
       - Brief de Implementación v2.1: 00_Especificacion/Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md
       - Decisiones (ADR):
@@ -62,13 +62,19 @@ nav:
       - Revisiones:
           - Datos sensibles 13-oct-2026: 00_Especificacion/Revisiones/2026-10-13_revision_datos_sensibles.md
           - Matriz normativa 13-oct-2026: 00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md
+      - Borradores:
+          - 00_Especificacion/Borradores/index.md
+          - Capítulo 3 r1: 00_Especificacion/Borradores/Maestro_v1.4_Cap3_Releases_r1.md
+          - Capítulo 3 r2: 00_Especificacion/Borradores/Maestro_v1.4_Cap3_Releases_r2.md
       - Versiones anteriores (superadas):
+          - Brief Maestro v1.3: 00_Especificacion/Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md
           - Brief Maestro v1.2: 00_Especificacion/Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md
           - Brief de Agentes v1.0: 00_Especificacion/Brief_Agentes/v1.0/MATTX_Brief_Agentes_v1.0.md
           - Brief de Implementación v2.0: 00_Especificacion/Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md
           - Brief Maestro v1.1: 00_Especificacion/Brief_Maestro/v1.1/MATTX_Brief_Maestro_v1.1.md
           - Brief Maestro v1.0 (reconstrucción): 00_Especificacion/Brief_Maestro/v1.0/MATTX_Brief_Maestro_v1.0_reconstruccion.md
   - Releases:
+      - 01_Releases/index.md
       - R0 Esqueleto: 01_Releases/R0_Esqueleto/index.md
       - R1 Drenaje pluvial: 01_Releases/R1_Drenaje_Pluvial/index.md
       - R2 Cinco dominios: 01_Releases/R2_Cinco_Dominios/index.md

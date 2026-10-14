@@ -15,3 +15,4 @@
 | 2026-10-13 | Contratos de agente | — | Esquemas JSON 2020-12, contrato de Documentación científica, ejemplos sintéticos, validador y pruebas negativas en CI |
 | 2026-10-13 | Revisión | — | Verificación de la matriz normativa (C6): 95 normas, 3 verificadas en fuentes secundarias, 6 corregidas |
 | 2026-10-13 | Regla general | — | Toda versión anterior queda superada por la vigente y se conserva solo como historial |
+| 2026-10-14 | Brief Maestro | 1.4 | Capítulo 3 reescrito: ámbito científico abierto, releases con capacidad general y prueba de generalidad, red controlada, motores propios, áreas complementarias, continuidad entre releases (paquete de traspaso) y ciclo de feedback (Rn.x). Aceptado por el autor con esas dos condiciones |
