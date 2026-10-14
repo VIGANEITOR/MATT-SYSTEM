@@ -25,7 +25,7 @@ def leer(rel):
 
 out, inp = leer('ejemplos/drenaje_output.ejemplo.json'), leer('ejemplos/drenaje_input.ejemplo.json')
 con = leer('hidraulica.drenaje_pluvial@1.0.0.json')
-obs = leer('ejemplos/observation_report.ejemplo.json')
+obs = leer('ejemplos/potential_defect_report.ejemplo.json')
 Z = 'sha256:' + '0' * 64
 doc = {'entregable': {'fuente_md': Z, 'version': '0.1.0'}, 'trazabilidad': [], 'valores_faltantes': [],
        'bibliografia': [], 'anexo_ia': {'secciones': []}, 'estado': 'listo_para_revision'}
@@ -55,13 +55,21 @@ casos = [
     ('Entregable listo con un valor de IA', 'documentacion_output.json',
      dict(doc, trazabilidad=[{'marcador': '{{resultado:r1}}', 'resultado_id': 'r1', 'procedencia': 'Generado por IA'}]), False),
     ('Control: entregable listo y completo', 'documentacion_output.json', doc, True),
-    ('Observador incluye una decisión o aprobación', 'observation_report.schema.json',
+    ('Observador incluye una decisión o aprobación', 'potential_defect_report.schema.json',
      mod(obs, lambda x: x['hallazgos'][0].update(decision='aprobado')), False),
-    ('Observador sin evidencia en un hallazgo', 'observation_report.schema.json',
+    ('Observador sin evidencia en un hallazgo', 'potential_defect_report.schema.json',
      mod(obs, lambda x: x['hallazgos'][0].pop('evidencia')), False),
-    ('Observador con valor Calculado sin ejecución', 'observation_report.schema.json',
+    ('Observador con valor Calculado sin ejecución', 'potential_defect_report.schema.json',
      mod(obs, lambda x: x['hallazgos'][0].update(valores=[{'valor': 1, 'unidad': 'm3/s', 'procedencia': 'Calculado'}])), False),
-    ('Control: informe de observación válido', 'observation_report.schema.json', obs, True),
+    ('Observador reporta una mejora como defecto', 'potential_defect_report.schema.json',
+     mod(obs, lambda x: x['hallazgos'][0].update(tipo='mejora')), False),
+    ('Observador sin prioridad', 'potential_defect_report.schema.json',
+     mod(obs, lambda x: x['hallazgos'][0].pop('prioridad_sugerida')), False),
+    ('Observador con ejecución propia', 'potential_defect_report.schema.json',
+     mod(obs, lambda x: x['hallazgos'][0].update(ejecucion_observador='run-obs-1')), False),
+    ('Observador sin lo esperado frente a lo observado', 'potential_defect_report.schema.json',
+     mod(obs, lambda x: x['hallazgos'][0]['evidencia'].pop('esperado')), False),
+    ('Control: informe de defectos potenciales válido', 'potential_defect_report.schema.json', obs, True),
     ('Control: ejemplo de salida de drenaje', 'drenaje_output.json', out, True),
 ]
 fallos = 0

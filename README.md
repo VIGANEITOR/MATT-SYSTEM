@@ -20,7 +20,7 @@ se consulta (Constitución, Título III).
 | Constitución | 1.0 (provisional) | [CONSTITUCION.md](CONSTITUCION.md) |
 | Brief Maestro | 1.5 | [00_Especificacion/Brief_Maestro/v1.5](00_Especificacion/Brief_Maestro/v1.5/MATTX_Brief_Maestro_v1.5.md) |
 | Brief de Agentes | 1.1 (aceptado) | [00_Especificacion/Brief_Agentes/v1.1](00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md) |
-| Brief de Implementación | 2.2 (borrador) | [00_Especificacion/Brief_Implementacion/v2.2](00_Especificacion/Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md) |
+| Brief de Implementación | 2.3 (borrador) | [00_Especificacion/Brief_Implementacion/v2.3](00_Especificacion/Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md) |
 | Verificación de la matriz normativa | Revisión 13-oct-2026 | [00_Especificacion/Revisiones](00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md) |
 | Decisiones de arquitectura | ADR-001…008 (propuestos) | [00_Especificacion/ADR](00_Especificacion/ADR/README.md) |
 | Registro de cambios | — | [00_Especificacion/CHANGELOG.md](00_Especificacion/CHANGELOG.md) |
@@ -36,7 +36,7 @@ para el siguiente y se mejora con el feedback (Brief Maestro v1.5 §3).
 
 | Release | Capacidad | Casos de referencia (ejemplos) | Estado |
 |---|---|---|---|
-| R0 — Núcleo reproducible | Núcleo, sandbox sin red y con red controlada, procedencia; **fábrica mínima (≥ 50 % del Brief de Implementación)**; 7 agentes operativos y 14 observadores | Programa T1 piloto | Planificado |
+| R0 — Núcleo reproducible | Núcleo, sandbox sin red y con red controlada, procedencia; **fábrica mínima (≥ 50 % del Brief de Implementación)**; 7 agentes operativos y 14 observadores de defectos | Programa T1 piloto | Planificado |
 | R1 — Ciclo científico completo | Ciclo de punta a punta para cualquier dominio | Drenaje pluvial bajo CE.040 + prueba de generalidad en otro dominio | Planificado |
 | R2 — Multidominio e interdisciplina | Incorporación de cualquier dominio y flujos acoplados | Cinco dominios + un área más + 2 flujos acoplados | Planificado |
 | R3 — Integraciones y motores propios | Adaptadores abiertos, geomática, motores propios verificados | Motor propio de drenaje contrastado con SWMM | Planificado |

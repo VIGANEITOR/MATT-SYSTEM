@@ -7,7 +7,7 @@ Toda versión anterior queda **superada** por la vigente y se conserva solo como
 | [Constitución](../CONSTITUCION.md) | 1.0 | 1.0 (provisional) |
 | Brief Maestro | [v1.0](Brief_Maestro/v1.0/MATTX_Brief_Maestro_v1.0_reconstruccion.md) (reconstrucción) · [v1.1](Brief_Maestro/v1.1/MATTX_Brief_Maestro_v1.1.md) · [v1.2](Brief_Maestro/v1.2/MATTX_Brief_Maestro_v1.2.md) · [v1.3](Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md) · [v1.4](Brief_Maestro/v1.4/MATTX_Brief_Maestro_v1.4.md) · [v1.5](Brief_Maestro/v1.5/MATTX_Brief_Maestro_v1.5.md) | **v1.5** |
 | Brief de Agentes | [v1.0](Brief_Agentes/v1.0/MATTX_Brief_Agentes_v1.0.md) · [v1.1](Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md) | **v1.1** (aceptado) |
-| Brief de Implementación | [v2.0](Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md) · [v2.1](Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md) · [v2.2](Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md) | **v2.2** (borrador) |
+| Brief de Implementación | [v2.0](Brief_Implementacion/v2.0/MATTX_Brief_Implementacion_v2.0.md) · [v2.1](Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md) · [v2.2](Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md) · [v2.3](Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md) | **v2.3** (borrador) |
 | [ADR](ADR/README.md) | ADR-001 … ADR-008 | Propuestos |
 | [Borradores](Borradores/README.md) | Capítulo 3: r1, r2 (integrado en v1.4) | — |
 | Revisiones | [Datos sensibles](Revisiones/2026-10-13_revision_datos_sensibles.md) · [Matriz normativa](Revisiones/2026-10-13_verificacion_matriz_normativa.md) | — |

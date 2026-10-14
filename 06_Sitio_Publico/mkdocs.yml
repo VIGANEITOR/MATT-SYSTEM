@@ -46,7 +46,7 @@ nav:
       - 00_Especificacion/index.md
       - Brief Maestro v1.5: 00_Especificacion/Brief_Maestro/v1.5/MATTX_Brief_Maestro_v1.5.md
       - Brief de Agentes v1.1: 00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md
-      - Brief de Implementación v2.2: 00_Especificacion/Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md
+      - Brief de Implementación v2.3: 00_Especificacion/Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md
       - Decisiones (ADR):
           - 00_Especificacion/ADR/index.md
           - 00_Especificacion/ADR/ADR-000-plantilla.md
@@ -67,6 +67,7 @@ nav:
           - Capítulo 3 r1: 00_Especificacion/Borradores/Maestro_v1.4_Cap3_Releases_r1.md
           - Capítulo 3 r2: 00_Especificacion/Borradores/Maestro_v1.4_Cap3_Releases_r2.md
       - Versiones anteriores (superadas):
+          - Brief de Implementación v2.2: 00_Especificacion/Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md
           - Brief Maestro v1.4: 00_Especificacion/Brief_Maestro/v1.4/MATTX_Brief_Maestro_v1.4.md
           - Brief de Implementación v2.1: 00_Especificacion/Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md
           - Brief Maestro v1.3: 00_Especificacion/Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md

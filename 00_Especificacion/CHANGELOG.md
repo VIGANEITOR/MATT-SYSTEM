@@ -21,3 +21,6 @@
 | 2026-10-14 | Brief Maestro | 1.5 | Aplica SC-001: fábrica mínima en R0, 7 agentes operativos y 14 observadores, criterio de salida de R0 ampliado |
 | 2026-10-14 | Brief de Implementación | 2.2 | Inventario de 45 elementos con clases núcleo/Must/Should (≥ 50 % en R0, objetivo 62 %) y modo observador |
 | 2026-10-14 | Agentes | — | Catálogo de 21 agentes, asignación de R0, esquema de informe de observación y nuevas pruebas negativas |
+| 2026-10-14 | Brief de Implementación | 2.3 | Observadores: informes de defectos potenciales con evidencia, severidad y prioridad; sin ejecución, red, credenciales ni acciones privilegiadas; no aprueban su propia propuesta; utilidad medida por defectos reales |
+| 2026-10-14 | Agentes | — | Esquema `observation_report` reemplazado por `potential_defect_report`; 4 pruebas negativas nuevas |
+| 2026-10-14 | Feedback de R0 | — | FB-R0-002 aplicado; FB-R0-003 a FB-R0-007 (revisión aportada por el autor) pendientes de decisión |

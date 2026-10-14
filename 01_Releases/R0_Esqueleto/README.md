@@ -6,7 +6,7 @@
 Usuarios y roles, proyectos, registro de experimentos, orquestador con máquina de estados, sandbox con perfiles sin red y con red controlada, almacenamiento de artefactos con hash, procedencia básica, registro de agentes y contratos con validación de esquema, UI mínima.
 
 **Fábrica mínima (SC-001):** al menos el 50 % del Brief de Implementación operativo con evidencia; objetivo 62 %
-([inventario](../../00_Especificacion/Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md)).
+([inventario](../../00_Especificacion/Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md)).
 
 ## Ámbito científico
 Independiente del dominio: cualquier cálculo en los lenguajes soportados (Python primero).
@@ -18,7 +18,9 @@ Programa T1 piloto (fase G0).
 **Operativos (7):** Análisis, Planificación, Formulación científica, Métodos numéricos, Desarrollo científico,
 Verificación técnica, Despliegue.
 
-**Observadores (14):** el resto de los agentes base; leen, informan posibles errores y no bloquean ni aprueban
+**Observadores (14):** el resto de los agentes base; producen informes de defectos potenciales con evidencia y
+prioridad; no ejecutan, no modifican código ni aprueban. Utilidad medida por defectos reales
+([registro](06_Feedback/observadores.md))
 ([asignación](../../02_Agentes/asignaciones/R0.json)).
 
 ## Requisitos

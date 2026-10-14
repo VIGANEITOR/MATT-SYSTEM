@@ -1,0 +1,28 @@
+{
+  "report_id": "obs-ejemplo-001",
+  "observer": "documentacion_cientifica@1.0.0",
+  "release": "R0",
+  "fecha": "2026-10-14",
+  "artefactos_observados": [
+    "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "hallazgos": [
+    {
+      "id": "H1",
+      "tipo": "brecha_trazabilidad",
+      "severidad_sugerida": "S2",
+      "prioridad_sugerida": "P1",
+      "descripcion": "EJEMPLO SINTÉTICO: un valor de la salida del T1 no enlaza a la ejecución que lo produjo",
+      "evidencia": {
+        "artefacto": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "ubicacion": "resultados/caudal_pico",
+        "esperado": "procedencia Calculado con ejecucion_id",
+        "observado": "procedencia Calculado sin ejecucion_id"
+      },
+      "recomendacion": "Revisar la emisión de procedencia en el programa T1",
+      "confianza": "alta",
+      "requiere_reproduccion": false
+    }
+  ],
+  "resumen": "Ejemplo sintético para probar el esquema; no es un hallazgo real."
+}

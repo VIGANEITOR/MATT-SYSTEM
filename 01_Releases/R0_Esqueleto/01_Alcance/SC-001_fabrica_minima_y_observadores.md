@@ -28,8 +28,9 @@
 - Brief Maestro v1.5 (R0 en §3.1 y §3.5, fuentes de feedback en §3.6, catálogo y modo observador en §7.2).
 - Brief de Implementación v2.2 (§12 alcance por release, §13 modo observador, fase G0).
 - `02_Agentes/catalogo.json` y `02_Agentes/asignaciones/R0.json`.
-- Esquemas `observation_report`, `agent_catalog` y `release_assignment`.
+- Esquemas `observation_report` (reemplazado por `potential_defect_report` en FB-R0-002), `agent_catalog` y `release_assignment`.
 
 ## Seguimiento
 
+- FB-R0-002: definición de los observadores del autor, aplicada en el Brief de Implementación v2.3 §13.
 - FB-R0-001: incorporar el modo observador y el adelanto de Formulación y Métodos numéricos en el Brief de Agentes v1.2.

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/observation_report.schema.json",
-  "title": "MATTX — informe de observación",
-  "description": "Brief de Implementación v2.2 §13. Un observador propone; no decide. El esquema no admite campos de decisión ni de aprobación.",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/potential_defect_report.schema.json",
+  "title": "MATTX — informe de defectos potenciales (observador)",
+  "description": "Brief de Implementación v2.3 §13. Un observador reporta defectos potenciales con evidencia y prioridad; no ejecuta, no modifica y no decide. El esquema no admite campos de decisión, aprobación ni ejecución propia.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -45,6 +45,7 @@
           "id",
           "tipo",
           "severidad_sugerida",
+          "prioridad_sugerida",
           "descripcion",
           "evidencia",
           "recomendacion",
@@ -58,10 +59,10 @@
           "tipo": {
             "enum": [
               "posible_error",
-              "riesgo",
-              "brecha",
+              "riesgo_seguridad",
+              "brecha_trazabilidad",
               "inconsistencia_normativa",
-              "mejora"
+              "inconsistencia_documental"
             ]
           },
           "severidad_sugerida": {
@@ -81,7 +82,9 @@
             "additionalProperties": false,
             "required": [
               "artefacto",
-              "ubicacion"
+              "ubicacion",
+              "esperado",
+              "observado"
             ],
             "properties": {
               "artefacto": {
@@ -90,6 +93,22 @@
               "ubicacion": {
                 "type": "string",
                 "minLength": 1
+              },
+              "esperado": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observado": {
+                "type": "string",
+                "minLength": 1
+              },
+              "ejecuciones_referenciadas": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": "Solo ejecuciones ya existentes; el observador no ejecuta"
               }
             }
           },
@@ -111,10 +130,16 @@
             },
             "description": "Valores que respaldan un posible error numérico; un valor Calculado exige su ejecución"
           },
-          "ejecucion_observador": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Ejecución propia en sandbox P0 aislado; nunca alimenta resultados del proyecto"
+          "prioridad_sugerida": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2",
+              "P3"
+            ]
+          },
+          "requiere_reproduccion": {
+            "type": "boolean"
           }
         }
       }
@@ -122,6 +147,10 @@
     "resumen": {
       "type": "string",
       "minLength": 1
+    },
+    "reemplaza_a": {
+      "$ref": "comunes.schema.json#/$defs/Sha256",
+      "description": "Hash del informe anterior que este corrige (los informes son inmutables)"
     }
   }
 }
