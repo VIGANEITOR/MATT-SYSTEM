@@ -16,7 +16,7 @@ for nombre in ('CONSTITUCION.md', 'PENDIENTES.md', 'SECURITY.md'):
     shutil.copy(ROOT / nombre, DOCS / nombre)
 for carpeta in CARPETAS:
     for f in (ROOT / carpeta).rglob('*'):
-        if f.is_file() and f.suffix.lower() in {'.md', '.png', '.jpg', '.svg', '.json'}:
+        if f.is_file() and f.suffix.lower() in {'.md', '.png', '.jpg', '.svg', '.json', '.docx'}:
             destino = DOCS / f.relative_to(ROOT)
             destino.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy(f, destino)
