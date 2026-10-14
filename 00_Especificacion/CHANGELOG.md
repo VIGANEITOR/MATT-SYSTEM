@@ -16,3 +16,8 @@
 | 2026-10-13 | Revisión | — | Verificación de la matriz normativa (C6): 95 normas, 3 verificadas en fuentes secundarias, 6 corregidas |
 | 2026-10-13 | Regla general | — | Toda versión anterior queda superada por la vigente y se conserva solo como historial |
 | 2026-10-14 | Brief Maestro | 1.4 | Capítulo 3 reescrito: ámbito científico abierto, releases con capacidad general y prueba de generalidad, red controlada, motores propios, áreas complementarias, continuidad entre releases (paquete de traspaso) y ciclo de feedback (Rn.x). Aceptado por el autor con esas dos condiciones |
+| 2026-10-14 | Brief de Agentes | 1.1 | **Aceptado** por el autor. Ajustes para v1.2 registrados en FB-R0-001 |
+| 2026-10-14 | Solicitud de cambio | SC-001 | R0 implementa al menos el 50 % del Brief de Implementación; los agentes que aún no operan actúan como observadores |
+| 2026-10-14 | Brief Maestro | 1.5 | Aplica SC-001: fábrica mínima en R0, 7 agentes operativos y 14 observadores, criterio de salida de R0 ampliado |
+| 2026-10-14 | Brief de Implementación | 2.2 | Inventario de 45 elementos con clases núcleo/Must/Should (≥ 50 % en R0, objetivo 62 %) y modo observador |
+| 2026-10-14 | Agentes | — | Catálogo de 21 agentes, asignación de R0, esquema de informe de observación y nuevas pruebas negativas |

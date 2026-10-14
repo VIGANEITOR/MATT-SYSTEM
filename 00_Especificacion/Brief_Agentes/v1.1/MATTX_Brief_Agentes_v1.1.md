@@ -7,7 +7,7 @@ Agentes para la creación científica de programas de ingeniería civil · Oct 1
 | Campo | Definición |
 |---|---|
 | Versión | 1.1 (reemplaza a 1.0 del 13-oct-2026) |
-| Estado | Especificación objetivo. Redactada con asistencia de IA; pendiente de aprobación humana |
+| Estado | **Aceptado por el autor el 2026-10-14**, ejerciendo provisionalmente los roles de responsable (Constitución, Disposición transitoria primera). Redactado con asistencia de IA. Ajustes pendientes para v1.2: FB-R0-001 |
 | Rige junto con | [Constitución](../../../CONSTITUCION.md) · [Brief Maestro v1.3](../../Brief_Maestro/v1.3/MATTX_Brief_Maestro_v1.3.md) · [Brief de Implementación v2.1](../../Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md) |
 | Vigencia | Toda versión anterior queda **superada** por esta y se conserva solo como historial. Las referencias de este documento apuntan siempre a las versiones vigentes indicadas arriba |
 

@@ -71,6 +71,40 @@ for p in sorted(EJ.glob('*.ejemplo.json')):
     if e is not None:
         validar(e, nombre, p.name)
 
+# 4. Catálogo de agentes y asignaciones por release
+RAIZ = DIR.parent
+catalogo = cargar(RAIZ / 'catalogo.json')
+if catalogo is not None:
+    validar(catalogo, 'agent_catalog.schema.json', 'catalogo.json')
+    ids = [x['id'] for x in catalogo.get('agentes', [])]
+    if len(ids) != len(set(ids)):
+        errores.append('catalogo.json: hay agentes repetidos')
+    release_de = {x['id']: x['release_operativo'] for x in catalogo.get('agentes', [])}
+    for p in sorted((RAIZ / 'asignaciones').glob('*.json')):
+        asig = cargar(p)
+        if asig is None:
+            continue
+        validar(asig, 'release_assignment.schema.json', p.name)
+        oper = set(asig.get('operativos', []))
+        obs = [o['agent_id'] for o in asig.get('observadores', [])]
+        if oper & set(obs):
+            errores.append(f'{p.name}: agentes operativos y observadores a la vez: {sorted(oper & set(obs))}')
+        if len(obs) != len(set(obs)):
+            errores.append(f'{p.name}: observadores repetidos')
+        faltan = set(ids) - oper - set(obs)
+        sobran = (oper | set(obs)) - set(ids)
+        if faltan:
+            errores.append(f'{p.name}: agentes del catálogo sin modo asignado: {sorted(faltan)}')
+        if sobran:
+            errores.append(f'{p.name}: agentes que no están en el catálogo: {sorted(sobran)}')
+        rel = asig.get('release')
+        for a in ids:
+            if release_de[a] == rel and a not in oper:
+                errores.append(f'{p.name}: {a} opera desde {rel} según el catálogo y debe ser operativo')
+        for a in oper:
+            if a in release_de and release_de[a] != rel and a not in asig.get('adelantados', []):
+                errores.append(f'{p.name}: {a} es operativo antes de su release ({release_de[a]}) sin figurar en "adelantados"')
+
 print(f'Esquemas: {len(esquemas)} · contratos: {len(list(DIR.glob("*.json")))} · ejemplos: {len(list(EJ.glob("*.ejemplo.json")))}')
 if errores:
     print('ERRORES:\n  ' + '\n  '.join(errores))

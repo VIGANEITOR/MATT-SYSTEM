@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/release_assignment.schema.json",
+  "title": "MATTX — asignación de modos de agente por release",
+  "description": "Qué agentes operan y cuáles observan en un release. El validador comprueba que cubra el catálogo sin repetir agentes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "release",
+    "vigente_desde",
+    "fuente",
+    "operativos",
+    "observadores"
+  ],
+  "properties": {
+    "release": {
+      "type": "string",
+      "pattern": "^R[0-9]+(\\.[0-9]+)?\\+?$"
+    },
+    "vigente_desde": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "fuente": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operativos": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z_]*$"
+      },
+      "uniqueItems": true
+    },
+    "adelantados": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z_]*$"
+      },
+      "uniqueItems": true,
+      "description": "Operativos antes de su release del catálogo (p. ej., un Should cumplido)"
+    },
+    "observadores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "agent_id",
+          "observa"
+        ],
+        "properties": {
+          "agent_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z_]*$"
+          },
+          "observa": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

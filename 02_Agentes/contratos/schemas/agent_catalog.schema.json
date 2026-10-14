@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/agent_catalog.schema.json",
+  "title": "MATTX — catálogo de agentes base",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version_brief_agentes",
+    "agentes"
+  ],
+  "properties": {
+    "version_brief_agentes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agentes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "nombre",
+          "grupo",
+          "release_operativo"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z_]*$"
+          },
+          "nombre": {
+            "type": "string",
+            "minLength": 1
+          },
+          "grupo": {
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "release_operativo": {
+            "type": "string",
+            "pattern": "^R[0-9]+(\\.[0-9]+)?\\+?$"
+          }
+        }
+      }
+    }
+  }
+}

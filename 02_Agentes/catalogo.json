@@ -1,0 +1,131 @@
+{
+  "version_brief_agentes": "1.1 (releases de Formulación y Métodos numéricos según SC-001)",
+  "agentes": [
+    {
+      "id": "analisis",
+      "nombre": "Análisis",
+      "grupo": "A",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "investigacion",
+      "nombre": "Investigación",
+      "grupo": "A",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "planificacion",
+      "nombre": "Planificación",
+      "grupo": "A",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "desarrollo_cientifico",
+      "nombre": "Desarrollo científico",
+      "grupo": "A",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "diseno_tecnico",
+      "nombre": "Diseño técnico",
+      "grupo": "A",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "verificacion_tecnica",
+      "nombre": "Verificación técnica",
+      "grupo": "A",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "despliegue",
+      "nombre": "Despliegue",
+      "grupo": "A",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "aprendizaje",
+      "nombre": "Aprendizaje",
+      "grupo": "A",
+      "release_operativo": "R2"
+    },
+    {
+      "id": "direccion_arte",
+      "nombre": "Dirección de Arte Digital",
+      "grupo": "B",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "design_system",
+      "nombre": "Design System",
+      "grupo": "B",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "uiux",
+      "nombre": "UI/UX Designer",
+      "grupo": "B",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "frontend",
+      "nombre": "Frontend/UI Engineer",
+      "grupo": "B",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "qa_visual",
+      "nombre": "QA Visual y Accesibilidad",
+      "grupo": "B",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "formulacion",
+      "nombre": "Formulación científica",
+      "grupo": "C",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "metodos_numericos",
+      "nombre": "Métodos numéricos",
+      "grupo": "C",
+      "release_operativo": "R0"
+    },
+    {
+      "id": "incertidumbre",
+      "nombre": "Incertidumbre y experimentación",
+      "grupo": "C",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "multicriterio",
+      "nombre": "Decisión multicriterio",
+      "grupo": "C",
+      "release_operativo": "R2"
+    },
+    {
+      "id": "geomatica_bim",
+      "nombre": "Geomática y BIM",
+      "grupo": "C",
+      "release_operativo": "R3"
+    },
+    {
+      "id": "especialista_dominio",
+      "nombre": "Especialista de dominio",
+      "grupo": "C",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "documentacion_cientifica",
+      "nombre": "Documentación científica",
+      "grupo": "C",
+      "release_operativo": "R1"
+    },
+    {
+      "id": "forja",
+      "nombre": "Forja de herramientas y agentes",
+      "grupo": "C",
+      "release_operativo": "R3"
+    }
+  ]
+}

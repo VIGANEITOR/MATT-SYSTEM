@@ -1,0 +1,105 @@
+{
+  "release": "R0",
+  "vigente_desde": "2026-10-14",
+  "fuente": "SC-001; Brief de Implementación v2.2 §12.3",
+  "operativos": [
+    "analisis",
+    "planificacion",
+    "formulacion",
+    "metodos_numericos",
+    "desarrollo_cientifico",
+    "verificacion_tecnica",
+    "despliegue"
+  ],
+  "adelantados": [],
+  "observadores": [
+    {
+      "agent_id": "investigacion",
+      "observa": [
+        "Referencias de SPEC.md y THEORY.md",
+        "Vigencia de normas citadas"
+      ]
+    },
+    {
+      "agent_id": "diseno_tecnico",
+      "observa": [
+        "Estructura del repositorio del T1",
+        "Coherencia entre arquitectura y código"
+      ]
+    },
+    {
+      "agent_id": "aprendizaje",
+      "observa": [
+        "Defectos cerrados",
+        "Informes V&V"
+      ]
+    },
+    {
+      "agent_id": "direccion_arte",
+      "observa": [
+        "UI mínima",
+        "Gráficos de resultados"
+      ]
+    },
+    {
+      "agent_id": "design_system",
+      "observa": [
+        "UI mínima: tokens, contraste, estados"
+      ]
+    },
+    {
+      "agent_id": "uiux",
+      "observa": [
+        "UI mínima: flujo y patrones de confianza"
+      ]
+    },
+    {
+      "agent_id": "frontend",
+      "observa": [
+        "UI mínima: cálculo en cliente, uso de componentes"
+      ]
+    },
+    {
+      "agent_id": "qa_visual",
+      "observa": [
+        "UI mínima: accesibilidad WCAG 2.2 AA"
+      ]
+    },
+    {
+      "agent_id": "incertidumbre",
+      "observa": [
+        "Resultados del T1: parámetros inciertos no declarados"
+      ]
+    },
+    {
+      "agent_id": "multicriterio",
+      "observa": [
+        "Decisiones de diseño registradas en ADR"
+      ]
+    },
+    {
+      "agent_id": "geomatica_bim",
+      "observa": [
+        "CRS y unidades de entradas y salidas"
+      ]
+    },
+    {
+      "agent_id": "especialista_dominio",
+      "observa": [
+        "THEORY.md y casos dorados del T1 desde el dominio de hidráulica"
+      ]
+    },
+    {
+      "agent_id": "documentacion_cientifica",
+      "observa": [
+        "Trazabilidad de los resultados del T1 para una futura memoria"
+      ]
+    },
+    {
+      "agent_id": "forja",
+      "observa": [
+        "Tareas manuales repetidas y escalamientos recurrentes"
+      ]
+    }
+  ]
+}

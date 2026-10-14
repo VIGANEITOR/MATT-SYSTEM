@@ -13,12 +13,15 @@ registrada ni aprueba resultados o compuertas.
 Las instancias de dominio se nombran `<dominio>.<especialidad>` (p. ej., `hidraulica.drenaje_pluvial`) y declaran
 `base_agent` y `domain_profile` en su contrato.
 
-Ciclo de vida: Propuesto → Experimental → Supervisado → Activo → Retirado.
+Ciclo de vida: Propuesto → Experimental → Supervisado → Activo → Retirado. Los agentes que aún no operan en un release
+actúan como **observadores**: leen, informan posibles errores y no bloquean ni aprueban.
 
 ## Contenido
 
 | Ruta | Qué es |
 |---|---|
+| `catalogo.json` | Los 21 agentes base con su grupo y el release en que pasan a operativos |
+| `asignaciones/<release>.json` | Agentes operativos y observadores de cada release (Brief de Implementación v2.2 §12.3 y §13) |
 | `contratos/*.json` | Un contrato por agente y versión: `<agent_id>@<version>.json` |
 | `contratos/schemas/` | Esquemas JSON 2020-12: contrato, mensaje, tipos comunes, entradas y salidas |
 | `contratos/ejemplos/` | Instancias **sintéticas** para probar los esquemas (no son datos reales) |
