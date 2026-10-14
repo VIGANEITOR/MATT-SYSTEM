@@ -23,7 +23,9 @@
           "id",
           "nombre",
           "grupo",
-          "release_operativo"
+          "release_operativo",
+          "funcion",
+          "estado"
         ],
         "properties": {
           "id": {
@@ -44,6 +46,20 @@
           "release_operativo": {
             "type": "string",
             "pattern": "^R[0-9]+(\\.[0-9]+)?\\+?$"
+          },
+          "funcion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estado": {
+            "enum": [
+              "especificado",
+              "propuesto",
+              "experimental",
+              "supervisado",
+              "activo",
+              "retirado"
+            ]
           }
         }
       }

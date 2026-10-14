@@ -1,0 +1,14 @@
+{
+  "bloques": {
+    "00_Especificacion/Brief_Maestro/v1.6/MATTX_Brief_Maestro_v1.6.md": [
+      "catalogo_agentes_maestro"
+    ],
+    "00_Especificacion/Brief_Agentes/v1.2/MATTX_Brief_Agentes_v1.2.md": [
+      "agentes_por_release"
+    ],
+    "00_Especificacion/Brief_Implementacion/v2.4/MATTX_Brief_Implementacion_v2.4.md": [
+      "resumen_peso",
+      "inventario_fabrica"
+    ]
+  }
+}

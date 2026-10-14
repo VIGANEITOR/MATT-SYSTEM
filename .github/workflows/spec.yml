@@ -1,11 +1,9 @@
-name: Contratos de agente
+name: Contratos y registro de estado
 
 on:
   push:
     branches: [main]
-    paths: ["02_Agentes/**", ".github/workflows/spec.yml"]
   pull_request:
-    paths: ["02_Agentes/**", ".github/workflows/spec.yml"]
   workflow_dispatch:
 
 permissions:
@@ -22,3 +20,4 @@ jobs:
       - run: pip install -r 02_Agentes/requirements.txt
       - run: python 02_Agentes/validar_contratos.py
       - run: python 02_Agentes/pruebas_contratos.py
+      - run: python 00_Especificacion/registro/generar.py --check

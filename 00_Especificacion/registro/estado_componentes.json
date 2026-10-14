@@ -1,0 +1,1247 @@
+{
+  "version": "1.0",
+  "actualizado": "2026-10-14",
+  "componentes": [
+    {
+      "id": "PLA-01",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Usuarios y roles",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-01",
+        "criterio": "Solo un rol autorizado aprueba; el intento no autorizado queda registrado (RF-09)"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-02",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Proyectos con jurisdicción y CRS",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-02",
+        "criterio": "RF-01 / QA-PRJ-001"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-03",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Registro de experimentos con pregunta e hipótesis",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-03",
+        "criterio": "RF-02 / QA-SCI-001"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-04",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Orquestador con máquina de estados",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-04",
+        "criterio": "Transiciones del Brief Maestro §4 con su evidencia exigida"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-05",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Sandbox sin red",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-05",
+        "criterio": "RF-03 / QA-SBX-005"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-06",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Sandbox con red controlada mediante proxy de salida",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-06",
+        "criterio": "Solo destinos de red_permitida.json; cada conexión registrada; fuera de lista se bloquea"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "PLA-07",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Almacenamiento de artefactos direccionado por hash",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-07",
+        "criterio": "Artefacto recuperado por hash idéntico"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-08",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Procedencia básica (W3C PROV)",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-08",
+        "criterio": "RF-05 / QA-PRV-002"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-09",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Log de auditoría inmutable",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-09",
+        "criterio": "Ejecuciones, aprobaciones y cambios de permisos registrados y no modificables"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "PLA-10",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Aislamiento de credenciales",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-10",
+        "criterio": "Ningún agente ni proceso del sandbox puede leer una credencial (ADR-009)"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "PLA-11",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Registro de agentes y contratos con permisos en 4 dimensiones",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-11",
+        "criterio": "Contrato inválido o con permisos fuera de perfil se rechaza"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "PLA-12",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "UI mínima",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-12",
+        "criterio": "Usuario crea proyecto, lanza ejecución y ve su procedencia"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "PLA-13",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Patrones de confianza en la UI",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-13",
+        "criterio": "Brief Maestro §11.2"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-14",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Design system v1 en Storybook",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-14",
+        "criterio": "Brief Maestro §11.3"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-15",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Bandeja de revisión y aprobación",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-15",
+        "criterio": "Brief Maestro §11.1"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-16",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Exportación de paquete reproducible del proyecto",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-16",
+        "criterio": "RF-10 / QA-REP-004"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-17",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Procedimiento de incorporación de dominios y áreas",
+      "release": "R2",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-17",
+        "criterio": "Un dominio fuera de los cinco incorporado"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-18",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Acoplamiento entre flujos con procedencia",
+      "release": "R2",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-18",
+        "criterio": "2 flujos acoplados verificados"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-19",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Adaptadores de formatos abiertos (IFC, LandXML, GeoTIFF, GeoPackage)",
+      "release": "R3",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-19",
+        "criterio": "Matriz de conectores"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-20",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Ingesta de topografía y nubes de puntos",
+      "release": "R3",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-20",
+        "criterio": "RNF-04"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-21",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Paquete de proyecto cifrado",
+      "release": "R3",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-21",
+        "criterio": "Exportación con aprobación y cifrado verificable"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-22",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Matriz de conectores con estado real",
+      "release": "R3",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-22",
+        "criterio": "RF-13 / QA-CON-002"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PLA-23",
+      "producto": "plataforma",
+      "inventario": false,
+      "nombre": "Registro de extensiones",
+      "release": "R4+",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PLA-23",
+        "criterio": "Extensión con mini-brief, ADR y criterio de salida"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1"
+    },
+    {
+      "id": "PRG-01",
+      "producto": "fabrica",
+      "inventario": false,
+      "nombre": "Motor propio: solucionador de redes de drenaje (T2)",
+      "release": "R3",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-PRG-01",
+        "criterio": "Dentro de tolerancia frente a SWMM en los casos dorados de R1"
+      },
+      "estado": "planificado",
+      "fuente": "Brief Maestro v1.6 §3.1.2"
+    },
+    {
+      "id": "FAB-01",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§2 Tipos",
+      "nombre": "T1 — Cálculo",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-001",
+        "criterio": "Programa T1 piloto liberado"
+      },
+      "agentes": "Desarrollo científico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-02",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§2 Tipos",
+      "nombre": "T2 — Biblioteca de métodos",
+      "release": "R0",
+      "clase_r0": "should",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-002",
+        "criterio": "Primer método T2 liberado y reutilizado por el T1"
+      },
+      "agentes": "Desarrollo científico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-03",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§2 Tipos",
+      "nombre": "T3 — Aplicación con interfaz",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-003",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Grupo B (observan en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-04",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§2 Tipos",
+      "nombre": "T4 — Flujo integrado",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-004",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Especialista de dominio (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-05",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§2 Tipos",
+      "nombre": "T5 — Experimento publicable",
+      "release": "R2",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-005",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Incertidumbre (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-06",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 1 — Solicitud estructurada",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-006",
+        "criterio": "Solicitud del T1 registrada"
+      },
+      "agentes": "Análisis",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-07",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 2 — Estado del arte",
+      "release": "R0",
+      "clase_r0": "should",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-007",
+        "criterio": "Matriz de fuentes del T1 obtenida por red controlada (OpenAlex/Crossref)"
+      },
+      "agentes": "Investigación",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-08",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 3 — Especificación (SPEC.md)",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-008",
+        "criterio": "SPEC del T1 aprobado en G-SPEC"
+      },
+      "agentes": "Planificación",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-09",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 4 — Teoría (THEORY.md)",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-009",
+        "criterio": "THEORY del T1 aprobado en G-THEORY"
+      },
+      "agentes": "Formulación científica",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-10",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 5 — Método numérico (NUMERICS.md)",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-010",
+        "criterio": "NUMERICS del T1 con criterio de convergencia"
+      },
+      "agentes": "Métodos numéricos",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-11",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 6 — Arquitectura",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-011",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Diseño técnico (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-12",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 7 — Implementación",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-012",
+        "criterio": "Pull request del T1 aprobado en G-CODE"
+      },
+      "agentes": "Desarrollo científico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-13",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 8 — Verificación y validación",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-013",
+        "criterio": "Informe V&V del T1"
+      },
+      "agentes": "Verificación técnica",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-14",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 9 — Interfaz",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-014",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Grupo B (observan en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-15",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 10 — Documentación",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-015",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Documentación científica (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-16",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 10b — Empaquetado",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-016",
+        "criterio": "Imagen con digest, manifiesto y CITATION.cff del T1"
+      },
+      "agentes": "Despliegue",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-17",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 11 — Aprobación humana",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-017",
+        "criterio": "Aprobación nominal registrada"
+      },
+      "agentes": "Persona autorizada",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-18",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§3 Pipeline",
+      "nombre": "Etapa 12 — Aprendizaje",
+      "release": "R2",
+      "clase_r0": "posterior",
+      "criticidad": "baja",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-018",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Aprendizaje (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-19",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-SPEC",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-019",
+        "criterio": "Lista de verificación aplicada al T1"
+      },
+      "agentes": "Planificación + persona",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-20",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-THEORY",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-020",
+        "criterio": "Lista de verificación aplicada al T1"
+      },
+      "agentes": "Formulación + especialista",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-21",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-CODE",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-021",
+        "criterio": "Lista de verificación aplicada al T1"
+      },
+      "agentes": "Revisor humano",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-22",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-VERIFY",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-022",
+        "criterio": "Lista de verificación aplicada al T1"
+      },
+      "agentes": "Verificación técnica + responsable científico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-23",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-UI",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-023",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "QA Visual (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-24",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-DOC",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-024",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "Documentación científica (observa en R0)",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-25",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§4 Compuertas",
+      "nombre": "G-RELEASE",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-025",
+        "criterio": "T1 re-ejecutado fuera de MATTX"
+      },
+      "agentes": "Despliegue + responsable técnico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-26",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§5 Registro",
+      "nombre": "Registro de programas",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-026",
+        "criterio": "T1 registrado con estado y versión"
+      },
+      "agentes": "Despliegue",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-27",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§5 Registro",
+      "nombre": "Biblioteca de métodos",
+      "release": "R0",
+      "clase_r0": "should",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-027",
+        "criterio": "Biblioteca con el primer T2"
+      },
+      "agentes": "Desarrollo científico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-28",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§6 Plantilla",
+      "nombre": "Plantilla de programa",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-028",
+        "criterio": "T1 creado desde la plantilla"
+      },
+      "agentes": "Planificación",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-29",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§6 Plantilla",
+      "nombre": "Secciones obligatorias de SPEC.md (con esquema)",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-029",
+        "criterio": "Esquema de SPEC validado en CI"
+      },
+      "agentes": "Planificación",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-30",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§6 Plantilla",
+      "nombre": "Secciones obligatorias de THEORY.md (con esquema)",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-030",
+        "criterio": "Esquema de THEORY validado en CI"
+      },
+      "agentes": "Formulación científica",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-31",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§7 Repositorio",
+      "nombre": "Estructura del monorepo MATT-SYSTEM",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "baja",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-031",
+        "criterio": "Estructura del monorepo publicada y documentada"
+      },
+      "agentes": "—",
+      "estado": "operativo",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b",
+      "evidencia": "Estructura publicada en el repositorio (README.md, carpetas 00–08)"
+    },
+    {
+      "id": "FAB-32",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§8 Git",
+      "nombre": "Flujo de trabajo con Git (rama protegida, Conventional Commits, etiquetas)",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-032",
+        "criterio": "Rama main protegida; etiqueta r0.x.y"
+      },
+      "agentes": "Responsable técnico",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-33",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline docs",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "baja",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-033",
+        "criterio": "Ya compila el sitio en cada cambio"
+      },
+      "agentes": "—",
+      "estado": "probado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b",
+      "evidencia": "mkdocs build --strict sin advertencias en local (14-oct-2026); ejecución en GitHub Actions no verificada"
+    },
+    {
+      "id": "FAB-34",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline spec",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-034",
+        "criterio": "Ya valida contratos y esquemas"
+      },
+      "agentes": "—",
+      "estado": "probado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b",
+      "evidencia": "02_Agentes/validar_contratos.py y pruebas_contratos.py en verde en local (14-oct-2026); ejecución en GitHub Actions no verificada"
+    },
+    {
+      "id": "FAB-35",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline code",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-035",
+        "criterio": "Lint, tipado, pruebas, SAST y secretos en cada PR"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-36",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline verify",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-036",
+        "criterio": "Casos dorados y propiedades del T1 en CI"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-37",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline evals",
+      "release": "R0",
+      "clase_r0": "must",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-037",
+        "criterio": "Evals de integridad de los 21 agentes en CI"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-38",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline e2e-ui",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "media",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-038",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-39",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline rep (reproducibilidad)",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "critica",
+      "no_compensable": true,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-039",
+        "criterio": "QA-REP en CI"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    },
+    {
+      "id": "FAB-40",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§9 CI",
+      "nombre": "Pipeline pages",
+      "release": "R0",
+      "clase_r0": "should",
+      "criticidad": "baja",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-040",
+        "criterio": "Sitio publicado (requiere activar Pages)"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-41",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§10 Fases",
+      "nombre": "G0 — Arranque",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-041",
+        "criterio": "Criterio de salida de G0 cumplido"
+      },
+      "agentes": "Todos",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0b"
+    },
+    {
+      "id": "FAB-42",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§10 Fases",
+      "nombre": "G1 — Primer dominio",
+      "release": "R1",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-042",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-43",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§10 Fases",
+      "nombre": "G2 — Multidominio",
+      "release": "R2",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-043",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-44",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§10 Fases",
+      "nombre": "G3 — Escala",
+      "release": "R3",
+      "clase_r0": "posterior",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-044",
+        "criterio": "Se define al planificar su release"
+      },
+      "agentes": "—",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12"
+    },
+    {
+      "id": "FAB-45",
+      "producto": "fabrica",
+      "inventario": true,
+      "seccion": "§11 Terminado",
+      "nombre": "Definición de terminado",
+      "release": "R0",
+      "clase_r0": "nucleo",
+      "criticidad": "alta",
+      "no_compensable": false,
+      "prueba_aceptacion": {
+        "id": "QA-IMP-045",
+        "criterio": "Aplicada a cada artefacto de R0"
+      },
+      "agentes": "Todos",
+      "estado": "planificado",
+      "fuente": "Brief de Implementación v2.4 §12",
+      "etapa_r0": "R0a"
+    }
+  ]
+}

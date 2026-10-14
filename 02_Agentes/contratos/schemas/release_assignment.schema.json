@@ -66,6 +66,10 @@
           }
         }
       }
+    },
+    "activacion_observadores": {
+      "type": "string",
+      "minLength": 1
     }
   }
 }

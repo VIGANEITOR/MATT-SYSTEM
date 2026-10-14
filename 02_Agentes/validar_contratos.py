@@ -47,10 +47,22 @@ def validar(instancia, nombre_esquema, etiqueta):
 
 
 # 2. Contratos
+red = cargar(DIR.parent / 'red_permitida.json') or {'destinos': []}
+validar(red, 'allowlist.schema.json', 'red_permitida.json')
+destinos = {d['id']: d for d in red.get('destinos', [])}
 for p in sorted(DIR.glob('*.json')):
     c = cargar(p)
     if c is None:
         continue
+    perm = c.get('permissions', {})
+    for d in perm.get('network_allowlist', []):
+        if d not in destinos:
+            errores.append(f'{p.name}: destino de red {d!r} no está en red_permitida.json')
+    for d in c.get('credenciales', []):
+        if d not in perm.get('network_allowlist', []):
+            errores.append(f'{p.name}: credencial de {d!r} sin ese destino en network_allowlist')
+        elif not destinos.get(d, {}).get('requiere_credencial'):
+            errores.append(f'{p.name}: {d!r} no requiere credencial según red_permitida.json')
     validar(c, 'agent_contract.schema.json', p.name)
     esperado = f"{c.get('agent_id')}@{c.get('contract_version')}.json"
     if p.name != esperado:

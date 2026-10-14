@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/VIGANEITOR/MATT-SYSTEM/02_Agentes/contratos/schemas/agent_contract.schema.json",
   "title": "MATTX — contrato de agente",
-  "description": "Brief Maestro v1.3 §7.1 y Brief de Agentes v1.1 §6.3. El orquestador rechaza agentes cuyo contrato no valide.",
+  "description": "Brief Maestro v1.6 §7.1 y Brief de Agentes v1.2 §6.3. Permisos en 4 dimensiones; las credenciales nunca se exponen al agente ni al sandbox.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -40,14 +40,6 @@
         "supervisado",
         "activo",
         "retirado"
-      ]
-    },
-    "sandbox_profile": {
-      "enum": [
-        "P0",
-        "P1",
-        "P2",
-        "P3"
       ]
     },
     "inputs": {
@@ -97,11 +89,13 @@
         },
         "network_allowlist": {
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string",
-            "minLength": 1
+            "pattern": "^[a-z][a-z_]*$"
           },
-          "minItems": 1
+          "description": "IDs de 02_Agentes/red_permitida.json"
         },
         "read": {
           "type": "array",
@@ -116,12 +110,23 @@
             "type": "string",
             "minLength": 1
           }
+        },
+        "execute": {
+          "enum": [
+            "ninguna",
+            "P0",
+            "P1",
+            "P2",
+            "P3"
+          ],
+          "description": "Ejecución: ninguna o perfil de sandbox"
         }
       },
       "required": [
-        "network",
         "read",
-        "write"
+        "write",
+        "network",
+        "execute"
       ],
       "if": {
         "properties": {
@@ -195,6 +200,15 @@
         "minLength": 1
       },
       "minItems": 1
+    },
+    "credenciales": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z_]*$"
+      },
+      "description": "Destinos cuya credencial inyecta el proxy de salida. Solo se nombra el destino: el agente nunca recibe el valor (ADR-009)"
     }
   },
   "required": [

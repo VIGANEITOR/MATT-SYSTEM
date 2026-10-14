@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MATTX — registro único de estado de componentes",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "actualizado",
+    "componentes"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "actualizado": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "componentes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "producto",
+          "inventario",
+          "nombre",
+          "release",
+          "clase_r0",
+          "criticidad",
+          "no_compensable",
+          "prueba_aceptacion",
+          "estado",
+          "fuente"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(FAB|PLA|PRG)-[0-9]{2}$"
+          },
+          "producto": {
+            "enum": [
+              "plataforma",
+              "fabrica"
+            ]
+          },
+          "inventario": {
+            "type": "boolean",
+            "description": "Elemento del inventario del Brief de Implementación (métrica del 50 %)"
+          },
+          "seccion": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string",
+            "minLength": 1
+          },
+          "release": {
+            "type": "string",
+            "pattern": "^R[0-9]+\\+?$"
+          },
+          "clase_r0": {
+            "enum": [
+              "nucleo",
+              "must",
+              "should",
+              "posterior"
+            ]
+          },
+          "etapa_r0": {
+            "enum": [
+              "R0a",
+              "R0b"
+            ]
+          },
+          "criticidad": {
+            "enum": [
+              "critica",
+              "alta",
+              "media",
+              "baja"
+            ]
+          },
+          "no_compensable": {
+            "type": "boolean"
+          },
+          "prueba_aceptacion": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "criterio"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "criterio": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "agentes": {
+            "type": "string"
+          },
+          "estado": {
+            "enum": [
+              "planificado",
+              "en_desarrollo",
+              "probado",
+              "operativo",
+              "degradado",
+              "no_disponible"
+            ]
+          },
+          "evidencia": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fuente": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "estado": {
+                  "enum": [
+                    "probado",
+                    "operativo"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "evidencia"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

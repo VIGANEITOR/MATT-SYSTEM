@@ -22,6 +22,8 @@ actúan como **observadores**: leen, informan posibles errores y no bloquean ni 
 |---|---|
 | `catalogo.json` | Los 21 agentes base con su grupo y el release en que pasan a operativos |
 | `asignaciones/<release>.json` | Agentes operativos y observadores de cada release (Brief de Implementación v2.2 §12.3 y §13) |
+| `red_permitida.json` | Destinos de red controlada (fuente única); un contrato solo puede nombrar destinos de esta lista |
+| `contratos/historico/` | Contratos superados |
 | `contratos/*.json` | Un contrato por agente y versión: `<agent_id>@<version>.json` |
 | `contratos/schemas/` | Esquemas JSON 2020-12: contrato, mensaje, tipos comunes, entradas y salidas |
 | `contratos/ejemplos/` | Instancias **sintéticas** para probar los esquemas (no son datos reales) |

@@ -1,131 +1,173 @@
 {
-  "version_brief_agentes": "1.1 (releases de Formulación y Métodos numéricos según SC-001)",
+  "version_brief_agentes": "1.2",
   "agentes": [
     {
       "id": "analisis",
       "nombre": "Análisis",
       "grupo": "A",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "Convierte la solicitud en pregunta, hipótesis, entradas faltantes y criterio de aceptación",
+      "estado": "especificado"
     },
     {
       "id": "investigacion",
       "nombre": "Investigación",
       "grupo": "A",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Matriz de fuentes nacional e internacional con DOI, país y nivel de evidencia",
+      "estado": "especificado"
     },
     {
       "id": "planificacion",
       "nombre": "Planificación",
       "grupo": "A",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "SPEC.md y plan de tareas con dependencias y presupuesto",
+      "estado": "especificado"
     },
     {
       "id": "desarrollo_cientifico",
       "nombre": "Desarrollo científico",
       "grupo": "A",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "Código científico de cálculo y sus pruebas",
+      "estado": "especificado"
     },
     {
       "id": "diseno_tecnico",
       "nombre": "Diseño técnico",
       "grupo": "A",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Arquitectura del programa",
+      "estado": "especificado"
     },
     {
       "id": "verificacion_tecnica",
       "nombre": "Verificación técnica",
       "grupo": "A",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "V&V: balances, casos dorados, convergencia, propiedades y mutación",
+      "estado": "especificado"
     },
     {
       "id": "despliegue",
       "nombre": "Despliegue",
       "grupo": "A",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "Empaqueta programas reproducibles",
+      "estado": "especificado"
     },
     {
       "id": "aprendizaje",
       "nombre": "Aprendizaje",
       "grupo": "A",
-      "release_operativo": "R2"
+      "release_operativo": "R2",
+      "funcion": "Propone lecciones; se publican solo tras aprobación",
+      "estado": "especificado"
     },
     {
       "id": "direccion_arte",
       "nombre": "Dirección de Arte Digital",
       "grupo": "B",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Guía de arte y convenciones de gráficos científicos",
+      "estado": "especificado"
     },
     {
       "id": "design_system",
       "nombre": "Design System",
       "grupo": "B",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Tokens, componentes y estados",
+      "estado": "especificado"
     },
     {
       "id": "uiux",
       "nombre": "UI/UX Designer",
       "grupo": "B",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Flujos, wireframes y patrones de confianza",
+      "estado": "especificado"
     },
     {
       "id": "frontend",
       "nombre": "Frontend/UI Engineer",
       "grupo": "B",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Interfaz conectada al núcleo, con pruebas E2E",
+      "estado": "especificado"
     },
     {
       "id": "qa_visual",
       "nombre": "QA Visual y Accesibilidad",
       "grupo": "B",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Accesibilidad WCAG 2.2 AA y regresión visual",
+      "estado": "especificado"
     },
     {
       "id": "formulacion",
       "nombre": "Formulación científica",
       "grupo": "C",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "THEORY.md: ecuaciones, supuestos y rango de validez",
+      "estado": "especificado"
     },
     {
       "id": "metodos_numericos",
       "nombre": "Métodos numéricos",
       "grupo": "C",
-      "release_operativo": "R0"
+      "release_operativo": "R0",
+      "funcion": "NUMERICS.md: método numérico y convergencia",
+      "estado": "especificado"
     },
     {
       "id": "incertidumbre",
       "nombre": "Incertidumbre y experimentación",
       "grupo": "C",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Sensibilidad local (R1); Monte Carlo y Sobol (R2)",
+      "estado": "especificado"
     },
     {
       "id": "multicriterio",
       "nombre": "Decisión multicriterio",
       "grupo": "C",
-      "release_operativo": "R2"
+      "release_operativo": "R2",
+      "funcion": "AHP con razón de consistencia y sensibilidad de pesos",
+      "estado": "especificado"
     },
     {
       "id": "geomatica_bim",
       "nombre": "Geomática y BIM",
       "grupo": "C",
-      "release_operativo": "R3"
+      "release_operativo": "R3",
+      "funcion": "CRS, transformaciones, MDT, IFC y nubes de puntos",
+      "estado": "especificado"
     },
     {
       "id": "especialista_dominio",
       "nombre": "Especialista de dominio",
       "grupo": "C",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Ejecuta flujos del dominio con programas liberados (p. ej., hidraulica.drenaje_pluvial)",
+      "estado": "propuesto"
     },
     {
       "id": "documentacion_cientifica",
       "nombre": "Documentación científica",
       "grupo": "C",
-      "release_operativo": "R1"
+      "release_operativo": "R1",
+      "funcion": "Memorias y artículos con resultados insertados por referencia",
+      "estado": "propuesto"
     },
     {
       "id": "forja",
       "nombre": "Forja de herramientas y agentes",
       "grupo": "C",
-      "release_operativo": "R3"
+      "release_operativo": "R3",
+      "funcion": "Propone herramientas y agentes nuevos; nunca se auto-promueve",
+      "estado": "especificado"
     }
   ]
 }

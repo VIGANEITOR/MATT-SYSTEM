@@ -24,3 +24,9 @@
 | 2026-10-14 | Brief de Implementación | 2.3 | Observadores: informes de defectos potenciales con evidencia, severidad y prioridad; sin ejecución, red, credenciales ni acciones privilegiadas; no aprueban su propia propuesta; utilidad medida por defectos reales |
 | 2026-10-14 | Agentes | — | Esquema `observation_report` reemplazado por `potential_defect_report`; 4 pruebas negativas nuevas |
 | 2026-10-14 | Feedback de R0 | — | FB-R0-002 aplicado; FB-R0-003 a FB-R0-007 (revisión aportada por el autor) pendientes de decisión |
+| 2026-10-14 | Solicitud de cambio | SC-002 | R0a ruta mínima primero; 50 % por peso con no compensables; registro único; permisos en 4 dimensiones; plataforma y fábrica |
+| 2026-10-14 | Brief Maestro | 1.6 | Dos productos (§1.2); registro único de estado; R0a/R0b; permisos en 4 dimensiones y credenciales (§12.2); ADR-009; producto por requisito; terminología de observadores |
+| 2026-10-14 | Brief de Agentes | 1.2 | Solo cambios aceptados: Formulación y Métodos en R0; modo observador (§7.1); agentes por release generados desde el catálogo; permisos en 4 dimensiones; contratos 1.1.0 |
+| 2026-10-14 | Brief de Implementación | 2.4 | Capacidad ponderada con prueba de aceptación y no compensables; R0a/R0b; inventario generado desde el registro único |
+| 2026-10-14 | Registro y CI | — | `estado_componentes.json`, `ESTADO.md` generado, `red_permitida.json`; el CI comprueba que los briefs vigentes coincidan con el registro |
+| 2026-10-14 | ADR | ADR-009 | Propuesto: aislamiento de credenciales y permisos de ejecución |

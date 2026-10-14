@@ -40,13 +40,14 @@ markdown_extensions:
 nav:
   - Inicio: index.md
   - Constitución: CONSTITUCION.md
+  - Estado real: ESTADO.md
   - Pendientes: PENDIENTES.md
   - Seguridad: SECURITY.md
   - Especificación:
       - 00_Especificacion/index.md
-      - Brief Maestro v1.5: 00_Especificacion/Brief_Maestro/v1.5/MATTX_Brief_Maestro_v1.5.md
-      - Brief de Agentes v1.1: 00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md
-      - Brief de Implementación v2.3: 00_Especificacion/Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md
+      - Brief Maestro v1.6: 00_Especificacion/Brief_Maestro/v1.6/MATTX_Brief_Maestro_v1.6.md
+      - Brief de Agentes v1.2: 00_Especificacion/Brief_Agentes/v1.2/MATTX_Brief_Agentes_v1.2.md
+      - Brief de Implementación v2.4: 00_Especificacion/Brief_Implementacion/v2.4/MATTX_Brief_Implementacion_v2.4.md
       - Decisiones (ADR):
           - 00_Especificacion/ADR/index.md
           - 00_Especificacion/ADR/ADR-000-plantilla.md
@@ -58,6 +59,7 @@ nav:
           - 00_Especificacion/ADR/ADR-006-caso-dorado-r1.md
           - 00_Especificacion/ADR/ADR-007-despliegue.md
           - 00_Especificacion/ADR/ADR-008-licencia.md
+      - Registro único de estado: 00_Especificacion/registro/index.md
       - Registro de cambios: 00_Especificacion/CHANGELOG.md
       - Revisiones:
           - Datos sensibles 13-oct-2026: 00_Especificacion/Revisiones/2026-10-13_revision_datos_sensibles.md
@@ -67,6 +69,9 @@ nav:
           - Capítulo 3 r1: 00_Especificacion/Borradores/Maestro_v1.4_Cap3_Releases_r1.md
           - Capítulo 3 r2: 00_Especificacion/Borradores/Maestro_v1.4_Cap3_Releases_r2.md
       - Versiones anteriores (superadas):
+          - Brief Maestro v1.5: 00_Especificacion/Brief_Maestro/v1.5/MATTX_Brief_Maestro_v1.5.md
+          - Brief de Agentes v1.1 (aceptado): 00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md
+          - Brief de Implementación v2.3: 00_Especificacion/Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md
           - Brief de Implementación v2.2: 00_Especificacion/Brief_Implementacion/v2.2/MATTX_Brief_Implementacion_v2.2.md
           - Brief Maestro v1.4: 00_Especificacion/Brief_Maestro/v1.4/MATTX_Brief_Maestro_v1.4.md
           - Brief de Implementación v2.1: 00_Especificacion/Brief_Implementacion/v2.1/MATTX_Brief_Implementacion_v2.1.md

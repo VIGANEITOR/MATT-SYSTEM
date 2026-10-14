@@ -13,14 +13,19 @@ competente. La IA acelera la investigación, la codificación y la redacción; *
 La jurisdicción de cada proyecto solo define qué norma es de cumplimiento obligatorio; nunca limita qué conocimiento
 se consulta (Constitución, Título III).
 
+**Dos productos.** *MATTX plataforma* gestiona usuarios, proyectos, agentes, ejecuciones, permisos, datos, evidencias y
+versiones. *MATTX fábrica* transforma ideas en programas científicos, bibliotecas de métodos y aplicaciones
+verificadas. El estado real de ambos está solo en [ESTADO.md](ESTADO.md).
+
 ## Documentos vigentes
 
 | Documento | Versión | Archivo |
 |---|---|---|
 | Constitución | 1.0 (provisional) | [CONSTITUCION.md](CONSTITUCION.md) |
-| Brief Maestro | 1.5 | [00_Especificacion/Brief_Maestro/v1.5](00_Especificacion/Brief_Maestro/v1.5/MATTX_Brief_Maestro_v1.5.md) |
-| Brief de Agentes | 1.1 (aceptado) | [00_Especificacion/Brief_Agentes/v1.1](00_Especificacion/Brief_Agentes/v1.1/MATTX_Brief_Agentes_v1.1.md) |
-| Brief de Implementación | 2.3 (borrador) | [00_Especificacion/Brief_Implementacion/v2.3](00_Especificacion/Brief_Implementacion/v2.3/MATTX_Brief_Implementacion_v2.3.md) |
+| Brief Maestro | 1.6 | [00_Especificacion/Brief_Maestro/v1.6](00_Especificacion/Brief_Maestro/v1.6/MATTX_Brief_Maestro_v1.6.md) |
+| Brief de Agentes | 1.2 (cambios ya aceptados; por confirmar) | [00_Especificacion/Brief_Agentes/v1.2](00_Especificacion/Brief_Agentes/v1.2/MATTX_Brief_Agentes_v1.2.md) |
+| Brief de Implementación | 2.4 (borrador) | [00_Especificacion/Brief_Implementacion/v2.4](00_Especificacion/Brief_Implementacion/v2.4/MATTX_Brief_Implementacion_v2.4.md) |
+| **Estado real de los componentes** | Generado | [ESTADO.md](ESTADO.md) |
 | Verificación de la matriz normativa | Revisión 13-oct-2026 | [00_Especificacion/Revisiones](00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md) |
 | Decisiones de arquitectura | ADR-001…008 (propuestos) | [00_Especificacion/ADR](00_Especificacion/ADR/README.md) |
 | Registro de cambios | — | [00_Especificacion/CHANGELOG.md](00_Especificacion/CHANGELOG.md) |
@@ -32,11 +37,11 @@ Toda versión anterior de un documento queda **superada** por la vigente y se co
 ## Hoja de ruta
 
 El ámbito científico es **abierto**; cada release cierra solo la prueba de su capacidad, deja un paquete de traspaso
-para el siguiente y se mejora con el feedback (Brief Maestro v1.5 §3).
+para el siguiente y se mejora con el feedback (Brief Maestro v1.6 §3).
 
 | Release | Capacidad | Casos de referencia (ejemplos) | Estado |
 |---|---|---|---|
-| R0 — Núcleo reproducible | Núcleo, sandbox sin red y con red controlada, procedencia; **fábrica mínima (≥ 50 % del Brief de Implementación)**; 7 agentes operativos y 14 observadores de defectos | Programa T1 piloto | Planificado |
+| R0 — Núcleo reproducible | Núcleo, sandbox sin red y con red controlada, procedencia; **fábrica mínima por capacidad ponderada**, en dos etapas (R0a ruta mínima → R0b); 7 agentes operativos y 14 observadores tras R0a | Programa T1 piloto | Planificado |
 | R1 — Ciclo científico completo | Ciclo de punta a punta para cualquier dominio | Drenaje pluvial bajo CE.040 + prueba de generalidad en otro dominio | Planificado |
 | R2 — Multidominio e interdisciplina | Incorporación de cualquier dominio y flujos acoplados | Cinco dominios + un área más + 2 flujos acoplados | Planificado |
 | R3 — Integraciones y motores propios | Adaptadores abiertos, geomática, motores propios verificados | Motor propio de drenaje contrastado con SWMM | Planificado |

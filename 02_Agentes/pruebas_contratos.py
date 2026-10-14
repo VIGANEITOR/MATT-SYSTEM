@@ -24,7 +24,7 @@ def leer(rel):
 
 
 out, inp = leer('ejemplos/drenaje_output.ejemplo.json'), leer('ejemplos/drenaje_input.ejemplo.json')
-con = leer('hidraulica.drenaje_pluvial@1.0.0.json')
+con = leer('hidraulica.drenaje_pluvial@1.1.0.json')
 obs = leer('ejemplos/potential_defect_report.ejemplo.json')
 Z = 'sha256:' + '0' * 64
 doc = {'entregable': {'fuente_md': Z, 'version': '0.1.0'}, 'trazabilidad': [], 'valores_faltantes': [],
@@ -50,7 +50,13 @@ casos = [
      mod(inp, lambda x: x['criterios_diseno']['norma_cumplimiento'].update(rol='referencia')), False),
     ('Contrato con red abierta', 'agent_contract.schema.json',
      mod(con, lambda x: x['permissions'].update(network='allow_all')), False),
-    ('Instancia de dominio sin perfil', 'agent_contract.schema.json', mod(con, lambda x: x.update(base_agent='especialista_dominio')), False),
+    ('Contrato sin permiso de ejecución declarado', 'agent_contract.schema.json',
+     mod(con, lambda x: x['permissions'].pop('execute')), False),
+    ('Contrato con un secreto dentro de los permisos', 'agent_contract.schema.json',
+     mod(con, lambda x: x['permissions'].update(token='abc')), False),
+    ('Contrato con perfil de sandbox fuera de los permisos', 'agent_contract.schema.json',
+     mod(con, lambda x: x.update(sandbox_profile='P0')), False),
+    ('Instancia de dominio sin perfil', 'agent_contract.schema.json', mod(con, lambda x: x.pop('domain_profile')), False),
     ('Entregable listo con valores faltantes', 'documentacion_output.json', dict(doc, valores_faltantes=['r1']), False),
     ('Entregable listo con un valor de IA', 'documentacion_output.json',
      dict(doc, trazabilidad=[{'marcador': '{{resultado:r1}}', 'resultado_id': 'r1', 'procedencia': 'Generado por IA'}]), False),

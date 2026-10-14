@@ -1,7 +1,7 @@
 {
   "release": "R0",
   "vigente_desde": "2026-10-14",
-  "fuente": "SC-001; Brief de Implementación v2.2 §12.3",
+  "fuente": "SC-001 y SC-002; Brief de Implementación v2.4 §12.4",
   "operativos": [
     "analisis",
     "planificacion",
@@ -101,5 +101,6 @@
         "Tareas manuales repetidas y escalamientos recurrentes"
       ]
     }
-  ]
+  ],
+  "activacion_observadores": "Al superar la etapa R0a (ruta mínima completa), según SC-002"
 }

@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "aprobado_por": "Autor (Brief Maestro v1.4 §3.1.1)",
+  "fecha": "2026-10-14",
+  "destinos": [
+    {
+      "id": "pypi",
+      "nombre": "PyPI",
+      "hosts": [
+        "pypi.org",
+        "files.pythonhosted.org"
+      ],
+      "uso": "Paquetes de Python con versiones fijadas y escaneo de dependencias",
+      "requiere_credencial": false
+    },
+    {
+      "id": "senamhi",
+      "nombre": "SENAMHI",
+      "hosts": [
+        "senamhi.gob.pe"
+      ],
+      "uso": "Datos hidrometeorológicos del Perú",
+      "requiere_credencial": false
+    },
+    {
+      "id": "noaa",
+      "nombre": "NOAA",
+      "hosts": [
+        "ncei.noaa.gov"
+      ],
+      "uso": "Datos climáticos y meteorológicos globales",
+      "requiere_credencial": false
+    },
+    {
+      "id": "copernicus",
+      "nombre": "Copernicus",
+      "hosts": [
+        "cds.climate.copernicus.eu",
+        "dataspace.copernicus.eu"
+      ],
+      "uso": "Observación de la Tierra y reanálisis climático",
+      "requiere_credencial": true
+    },
+    {
+      "id": "openalex",
+      "nombre": "OpenAlex",
+      "hosts": [
+        "api.openalex.org"
+      ],
+      "uso": "Metadatos de literatura científica",
+      "requiere_credencial": false
+    },
+    {
+      "id": "crossref",
+      "nombre": "Crossref",
+      "hosts": [
+        "api.crossref.org"
+      ],
+      "uso": "Verificación de DOI y metadatos bibliográficos",
+      "requiere_credencial": false
+    }
+  ]
+}

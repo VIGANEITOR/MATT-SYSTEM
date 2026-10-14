@@ -23,7 +23,7 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 |---|---|---|---|---|
 | B1 | Designar responsables de producto, técnico y científico | ⬜ | Autor | Brief Maestro §0; Brief de Agentes §9.3 |
 | B2 | Ratificar la Constitución v1.0 (hoy provisional) | ⬜ | B1 | Disposición transitoria primera |
-| B3 | Aprobar los briefs redactados con IA. Brief de Agentes v1.1 ✅ aceptado (14-oct-2026); faltan el Brief Maestro v1.5 y el Brief de Implementación v2.3 | 🔄 | B1 | Constitución, Art. 22 |
+| B3 | Aprobar los briefs redactados con IA. Brief de Agentes v1.1 ✅ aceptado; falta confirmar la v1.2 (solo cambios ya aceptados) y aprobar el Brief Maestro v1.6 y el Brief de Implementación v2.4 | 🔄 | B1 | Constitución, Art. 22 |
 | B4 | Designar especialistas por dominio y revisores independientes | ⬜ | Responsable científico | Constitución, Art. 37 |
 | B5 | Reemplazar la reconstrucción del Brief Maestro v1.0 por el original, si existe | ⬜ | Autor | `00_Especificacion/Brief_Maestro/v1.0/` |
 | B6 | Buscar antecedentes de la marca "MATTX" en INDECOPI | ✅ Sin antecedentes (informado por el autor, 13-oct-2026) | Producto + legal | Guardar la constancia de la búsqueda (fecha, tipo fonética/figurativa, clases). Una búsqueda sin resultados no protege la marca: evaluar registrarla (clases 9 y 42 como mínimo) |
@@ -42,8 +42,8 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 | C5 | Esquemas JSON inexistentes | ✅ Resuelto | 7 esquemas, 2 contratos, 3 ejemplos; validador y pruebas negativas en CI (`.github/workflows/spec.yml`) |
 | C6 | Matriz normativa redactada con IA | 🔄 En revisión | [Documento de revisión](00_Especificacion/Revisiones/2026-10-13_verificacion_matriz_normativa.md): 95 normas; 6 corregidas en v1.3; 73 por verificar; 13 por precisar |
 | C7 | Hallazgos derivados de C6 | ⬜ | Confirmar en fuente oficial: CE.040 (y la modificación del num. 21.2.1), Ley 32069 y su reglamento con modificaciones de 2026, E.030 (RM 183-2026 y su régimen transitorio). Responsable: especialista de cada dominio, antes de R1 |
-| C10 | Ajustes del Brief de Agentes para v1.2 | ⬜ | FB-R0-001: modo observador y adelanto de Formulación y Métodos numéricos a R0 |
-| C11 | Revisión aportada por el autor: FB-R0-003 a FB-R0-007 (contrato único de estado, ruta mínima, métrica ponderada, permisos y credenciales, dos productos) | ⬜ Pendiente de decisión | [Registro de feedback de R0](01_Releases/R0_Esqueleto/06_Feedback/registro.md) |
+| C10 | Ajustes del Brief de Agentes para v1.2 | ✅ Aplicado | Brief de Agentes v1.2 (FB-R0-001) |
+| C11 | Revisión aportada por el autor (FB-R0-003 a 007) | ✅ Aplicado | SC-002; Brief Maestro v1.6, Brief de Agentes v1.2, Brief de Implementación v2.4, registro único y ADR-009 |
 | C9 | Capítulo 3 de releases | ✅ Aceptado por el autor (14-oct-2026) con dos condiciones, incorporadas | Brief Maestro v1.4 §3.5 (continuidad) y §3.6 (feedback) |
 | C8 | Aprobación de briefs | 🔄 | Ver B3 |
 
@@ -61,6 +61,8 @@ Revisión: 13-oct-2026. Se marca ✅ solo lo verificado. Cada pendiente indica q
 | D8 | Umbrales de cobertura y mutación por tipo de programa; proveedor de CI con sandbox | Responsable técnico | Brief de Implementación §12 |
 | D9 | Contratos de los 21 agentes y suite común de evals de integridad para observadores (criterio de entrada de R0) | Responsable técnico | SC-001; Brief de Implementación v2.3 §13.2 |
 | D10 | Presupuesto de los observadores por release y umbrales de utilidad | Producto + técnico | Brief de Implementación v2.3 §13.5 y §14 |
+| D11 | Decidir ADR-009 (aislamiento de credenciales y permisos de ejecución); criterio de entrada de R0 | Responsable técnico | [ADR-009](00_Especificacion/ADR/ADR-009-credenciales-y-ejecucion.md) |
+| D12 | Mantener `estado_componentes.json` al día: cada cambio de estado con su evidencia | Responsable técnico | [Registro único](00_Especificacion/registro/README.md) |
 
 ## E. Antes de R1
 

@@ -12,7 +12,7 @@ if DOCS.exists():
 DOCS.mkdir(parents=True)
 
 shutil.copy(ROOT / 'README.md', DOCS / 'index.md')
-for nombre in ('CONSTITUCION.md', 'PENDIENTES.md', 'SECURITY.md'):
+for nombre in ('CONSTITUCION.md', 'PENDIENTES.md', 'SECURITY.md', 'ESTADO.md'):
     shutil.copy(ROOT / nombre, DOCS / nombre)
 for carpeta in CARPETAS:
     for f in (ROOT / carpeta).rglob('*'):
